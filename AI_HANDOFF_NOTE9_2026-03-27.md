@@ -101,6 +101,21 @@ Power / emergency-state checks:
 - `C:\Users\ZN-\Documents\Antigravity\after_disable_ultra_power.png`
 - `C:\Users\ZN-\Documents\Antigravity\after_disable_ultra_power.xml`
 
+Flow automation reference files:
+
+- `C:\Users\ZN-\Documents\Antigravity\flow_phone.xml`
+- `C:\Users\ZN-\Documents\Antigravity\flow_smartview.xml`
+- `C:\Users\ZN-\Documents\Antigravity\phone_perms.xml`
+- `C:\Users\ZN-\Documents\Antigravity\phone_after_wifi.xml`
+- `C:\Users\ZN-\Documents\Antigravity\phone_final_check.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_step1.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_step2.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_found.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_pin_dialog.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_paired.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_final_check.xml`
+- `C:\Users\ZN-\Documents\Antigravity\tablet_retry.xml`
+
 ## What Was Confirmed
 
 ### 1. USB ADB works
@@ -291,6 +306,112 @@ At latest check:
 - `security.em.tstate` still remains `EM`
 - a real DeX permission/start dialog can now appear
 - the user can also use `scrcpy` on the PC as a fallback visual/control path
+
+## Latest Flow Automation Findings
+
+After the DeX recovery pass, the user reported that Samsung Flow connection from the tablet to the Note9 can be completed manually.
+The next request was to leave that path fully automated so neither device needs manual taps.
+
+### Current hard blocker for full unattended automation
+
+At latest live check, only the Note9 was visible by ADB.
+The tablet was not reachable on the stored ADB-over-Wi-Fi endpoint:
+
+- `192.168.1.20:5555` timed out
+
+That means:
+
+- the PC can fully automate the Note9 right now
+- the PC cannot fully automate the tablet until the tablet is reachable by ADB again
+
+This is the main precondition for true hands-free automation from the PC.
+
+### Exact Samsung Flow UI state machine reconstructed from historical XML
+
+Phone-side states observed in local evidence:
+
+- intro / idle screen:
+  - `Samsung Flow`
+  - `Inicie la configuración de Samsung Flow en su PC o tableta.`
+- permission intro:
+  - `Samsung Flow usa estos permisos`
+  - button `Continuar`
+- Android runtime permission:
+  - contacts permission dialog
+  - button `Permitir`
+- PIN confirmation:
+  - `Confirme que la clave de acceso es correcta...`
+  - resource `text_pin`
+  - buttons `Cancelar` and `Aceptar`
+- final mirroring consent:
+  - `¿Desea comenzar a transmitir con Samsung Flow?`
+  - button `Iniciar ahora`
+
+Tablet-side states observed in local evidence:
+
+- main/auth start screen:
+  - `Samsung Flow`
+  - `Verifica tu identidad...`
+- device list screen:
+  - `Selecciona el dispositivo al que conectarse`
+  - available device row with `txtDeviceName`
+- connection method dialog:
+  - `Métodos de conexión`
+  - choices `Wi-Fi o LAN` and `Bluetooth`
+- PIN confirmation:
+  - `Confirma que la clave de acceso es correcta...`
+  - resource `text_pin`
+  - buttons `Cancelar` and `Aceptar`
+- runtime permission:
+  - contacts permission dialog
+  - button `Permitir`
+- waiting-for-phone-consent screen:
+  - `Confirma en el teléfono para usar Smart View`
+- failure dialog:
+  - `No se ha podido conectar.`
+  - `Asegúrate de que tu teléfono tenga activado Samsung Flow.`
+  - button `Aceptar`
+
+### Intended automation design
+
+The planned rewrite for `auto_connect_flow.py` is a two-device ADB state machine that:
+
+1. connects to the Note9 by USB ADB
+2. connects to the tablet by serial or ADB over Wi-Fi
+3. wakes/unlocks both devices
+4. launches Samsung Flow on both using `com.samsung.android.galaxycontinuity/.SplashActivity`
+5. detects current screens from `uiautomator dump`
+6. taps only the matching UI actions:
+   - `Continuar`
+   - `Permitir`
+   - `Wi-Fi o LAN`
+   - first available device row
+   - `Aceptar` on both sides when the same PIN is visible
+   - `Iniciar ahora` on the phone when Smart View consent appears
+7. stops when the tablet enters the mirroring surface state
+
+### Important workspace note
+
+An in-progress rewrite of `auto_connect_flow.py` was started but intentionally not committed in a half-broken state.
+The file was restored to the last committed version before creating this handoff update.
+So:
+
+- current committed `auto_connect_flow.py` is still the older diagnostic-oriented version
+- the next AI should implement the state machine described above instead of assuming the automation already exists
+
+## New scrcpy Launcher
+
+A reliable launcher for the Note9 mirror on this PC was added:
+
+- `C:\Users\ZN-\Documents\Antigravity\Abrir_Note9_scrcpy.bat`
+
+And the old launcher now delegates to it:
+
+- `C:\Users\ZN-\Documents\Antigravity\lanzar_scrcpy.bat`
+
+Desktop shortcut created:
+
+- `C:\Users\ZN-\Desktop\Note9 via scrcpy.lnk`
 
 ## Things Already Tried
 
