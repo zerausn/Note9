@@ -5,7 +5,7 @@ This repository is the Note9-side workspace for the Samsung Note9
 which currently hosts the local Antigravity/OpenClaw manager and the
 OpenAI-compatible proxy used by the phone.
 
-## Verified State As Of 2026-03-30
+## Verified State As Of 2026-03-31
 
 - Device model: `SM-N9600`
 - Android version: `10`
@@ -25,6 +25,9 @@ OpenAI-compatible proxy used by the phone.
 - `openclaw` is installed inside the Debian rootfs
 - The PC-side Antigravity proxy is healthy at `http://127.0.0.1:8045`
   and reported version `4.1.31`
+- `openclaw tui` opens on the Note9 when the gateway is already running
+- `openclaw gateway` and `openclaw health` can be started from the Note9
+  Debian rootfs through `run-as com.termux`
 
 ## What This Repo Now Contains
 
@@ -39,6 +42,14 @@ OpenAI-compatible proxy used by the phone.
   Repo-specific instructions and hard-earned context for future AI agents.
 - [SESSION_NOTES_2026-03-30.md](./SESSION_NOTES_2026-03-30.md)
   Detailed notes about what was inspected, what worked, and what failed.
+- [SESSION_NOTES_2026-03-31.md](./SESSION_NOTES_2026-03-31.md)
+  Follow-up notes for the TUI/gateway automation that was completed later.
+- [launch_openclaw_gateway.sh](./launch_openclaw_gateway.sh)
+  Device-side launcher for `openclaw gateway` inside Debian.
+- [launch_openclaw_tui.sh](./launch_openclaw_tui.sh)
+  Device-side launcher for `openclaw tui` inside Debian.
+- [check_openclaw_health.sh](./check_openclaw_health.sh)
+  Device-side launcher for `openclaw health` inside Debian.
 
 ## Quick Start
 
@@ -49,6 +60,20 @@ python .\termux_bridge.py status
 python .\termux_bridge.py prepare-termux
 python .\termux_bridge.py reverse-openclaw
 python .\termux_bridge.py open-debian
+```
+
+If you want the full OpenClaw flow with no manual terminal typing on the PC:
+
+```powershell
+python .\termux_bridge.py openclaw-up
+```
+
+If you want to manage the pieces separately:
+
+```powershell
+python .\termux_bridge.py openclaw-gateway
+python .\termux_bridge.py openclaw-health
+python .\termux_bridge.py openclaw-tui
 ```
 
 If you want to try the desktop session:
@@ -64,7 +89,7 @@ It does three things:
 
 1. Enables `allow-external-apps = true` in
    `~/.termux/termux.properties`
-2. Copies the Debian CLI and XFCE launchers into the private Termux home
+2. Copies the Debian, XFCE, and OpenClaw launchers into the private Termux home
 3. Reloads Termux settings and tells you to relaunch the app cleanly
 
 That matters because future Termux external app execution depends on that
@@ -111,6 +136,38 @@ The old launcher `startxfce4_debian.sh` should be treated as stale.
 It still assumes the wrong user (`droidmaster`) and fails when run without
 the Termux `PATH`.
 
+## What `openclaw-up` Does
+
+`openclaw-up` is the automated flow that matched what actually worked on
+2026-03-31.
+
+It does this in order:
+
+1. syncs the OpenClaw launcher scripts into Termux home
+2. ensures `adb reverse tcp:8045 tcp:8045` is active
+3. starts `openclaw gateway` in a new Windows console window
+4. waits and checks `openclaw health` from the Note9 Debian rootfs
+5. opens `openclaw tui` in a second Windows console window
+
+This is the current best automated path because it does not depend on
+blindly typing into the visible Termux app.
+
+## OpenClaw Runtime Reality
+
+Inside the Debian rootfs:
+
+- `openclaw` by itself prints the CLI help
+- `openclaw tui` opens the terminal UI
+- `openclaw tui` shows `gateway disconnected` until `openclaw gateway`
+  is running
+- `openclaw health` is the quickest way to confirm the gateway is ready
+
+The successful end-to-end sequence on 2026-03-31 was:
+
+```powershell
+python .\termux_bridge.py openclaw-up
+```
+
 ## OpenClaw And Proxy Wiring
 
 The phone should not try to reach the PC proxy through a LAN IP.
@@ -155,6 +212,9 @@ contained `gemini-3-flash`.
 - The Debian CLI session can be opened from Termux through `proot-distro`.
 - The PC-side proxy is healthy and reachable for Android through
   `adb reverse tcp:8045 tcp:8045`.
+- `openclaw gateway` can be started from Debian and stays up on the Note9.
+- `openclaw health` reported healthy after the gateway was started.
+- `openclaw tui` connected correctly once the gateway was running.
 
 ## Current Limitations
 
@@ -164,13 +224,18 @@ contained `gemini-3-flash`.
 - SSH key login into Termux was not finished yet.
 - XFCE launch is prepared and scripted, but it should still be treated as
   needing live end-to-end verification after each fresh boot of the phone.
+- `termux-run` and direct `adb shell input text` are still not reliable
+  enough for complex commands on this Samsung build.
+- one-shot shell autostart through `.bashrc`, `.bash_profile`, `.profile`,
+  and `.bash_login` was attempted and did not fire automatically in Termux.
 
 ## Recommended Next Steps
 
-1. Keep using USB ADB as the recovery path.
-2. Use `prepare-termux` and `open-debian` as the standard entry path.
-3. Keep `reverse-openclaw` active whenever Debian/Termux should use the
+1. Use `openclaw-up` when you want OpenClaw ready with the least friction.
+2. Keep `reverse-openclaw` active whenever Debian/Termux should use the
    PC-side proxy.
+3. Keep using `run-as com.termux` launchers instead of UI typing for any
+   important workflow.
 4. Finish the SSH path inside Termux so Linux work stops depending on app
    launches.
-5. Revisit Wi-Fi ADB once the phone reports a stable Wi-Fi IP again.
+5. Revisit XFCE only after the CLI/TUI flow is stable enough for daily use.

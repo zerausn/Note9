@@ -37,6 +37,9 @@ TERMUX_EXTERNAL_APPS_PATTERN = re.compile(
 LAUNCHER_MAP = {
     "open-debian": "launch_debian_openclaw.sh",
     "open-xfce": "launch_debian_xfce.sh",
+    "openclaw-gateway": "launch_openclaw_gateway.sh",
+    "openclaw-tui": "launch_openclaw_tui.sh",
+    "openclaw-health": "check_openclaw_health.sh",
 }
 
 PACKAGE_MAP = {
@@ -302,6 +305,12 @@ def spawn_interactive(args):
     return subprocess.run(args).returncode
 
 
+def spawn_detached(args):
+    creationflags = getattr(subprocess, "CREATE_NEW_CONSOLE", 0)
+    subprocess.Popen(args, creationflags=creationflags)
+    return 0
+
+
 def start_termux_launcher(device_id, script_name):
     script_path = f"{TERMUX_HOME}/{script_name}"
     return spawn_interactive(
@@ -315,6 +324,26 @@ def start_termux_launcher(device_id, script_name):
             script_path,
         ]
     )
+
+
+def start_termux_launcher_detached(device_id, script_name):
+    script_path = f"{TERMUX_HOME}/{script_name}"
+    return spawn_detached(
+        [
+            ADB,
+            "-s",
+            device_id,
+            "shell",
+            "run-as",
+            TERMUX_PACKAGE,
+            script_path,
+        ]
+    )
+
+
+def run_openclaw_health_check(device_id):
+    print("Checking OpenClaw gateway health from Debian...")
+    return start_termux_launcher(device_id, LAUNCHER_MAP["openclaw-health"])
 
 
 def open_termux_target(command_name, ip_hint):
@@ -334,7 +363,54 @@ def open_termux_target(command_name, ip_hint):
         print("Verify the Termux:X11 window live after launch.")
         return start_termux_launcher(selected, script_name)
 
+    if command_name == "openclaw-gateway":
+        print("Starting the OpenClaw gateway in a new console window.")
+        return start_termux_launcher_detached(selected, script_name)
+
+    if command_name == "openclaw-tui":
+        print("Starting the OpenClaw TUI in a new console window.")
+        return start_termux_launcher_detached(selected, script_name)
+
+    if command_name == "openclaw-health":
+        return run_openclaw_health_check(selected)
+
     return 0
+
+
+def openclaw_up(ip_hint):
+    selected = ensure_live_device(ip_hint)
+    if not selected:
+        return 1
+
+    print_header("OpenClaw Up")
+    if not install_termux_launchers(selected):
+        print("Failed while syncing OpenClaw launchers into Termux home.")
+        return 1
+
+    reverse_result = reverse_openclaw(ip_hint)
+    if reverse_result != 0:
+        return reverse_result
+
+    gateway_result = start_termux_launcher_detached(
+        selected, LAUNCHER_MAP["openclaw-gateway"]
+    )
+    if gateway_result != 0:
+        return gateway_result
+
+    print("Waiting for the OpenClaw gateway to come up...")
+    health_ok = False
+    for delay in (6, 6, 10):
+        time.sleep(delay)
+        if run_openclaw_health_check(selected) == 0:
+            health_ok = True
+            break
+
+    if not health_ok:
+        print("The OpenClaw gateway did not report healthy in time.")
+        return 1
+
+    print("Gateway is healthy. Opening the TUI in a new console window.")
+    return start_termux_launcher_detached(selected, LAUNCHER_MAP["openclaw-tui"])
 
 
 def get_proxy_health():
@@ -637,7 +713,7 @@ def build_parser():
     subparsers.add_parser("wifi", help="Promote USB ADB to Wi-Fi ADB or try direct connect.")
     subparsers.add_parser(
         "prepare-termux",
-        help="Enable Termux external app execution and copy Debian launchers into Termux home.",
+        help="Enable Termux external app execution and copy Debian/OpenClaw launchers into Termux home.",
     )
     subparsers.add_parser("forward-ssh", help="Forward local port 8022 to Termux sshd over ADB.")
     subparsers.add_parser(
@@ -651,6 +727,22 @@ def build_parser():
     subparsers.add_parser(
         "open-xfce",
         help="Open the Debian XFCE launcher inside Termux and Termux:X11.",
+    )
+    subparsers.add_parser(
+        "openclaw-gateway",
+        help="Start the OpenClaw gateway from the Debian rootfs in a new console window.",
+    )
+    subparsers.add_parser(
+        "openclaw-tui",
+        help="Start the OpenClaw TUI from the Debian rootfs in a new console window.",
+    )
+    subparsers.add_parser(
+        "openclaw-health",
+        help="Check OpenClaw gateway health from the Debian rootfs.",
+    )
+    subparsers.add_parser(
+        "openclaw-up",
+        help="Sync launchers, reverse the proxy, start the gateway, wait for health, then open the TUI.",
     )
     launch_parser = subparsers.add_parser("launch", help="Launch a Linux-related Android app.")
     launch_parser.add_argument("app", choices=sorted(PACKAGE_MAP.keys()))
@@ -677,6 +769,8 @@ def main():
         return connect_wifi(args.ip)
     if args.command == "prepare-termux":
         return prepare_termux(args.ip)
+    if args.command == "openclaw-up":
+        return openclaw_up(args.ip)
     if args.command == "launch":
         return launch_app(args.app, args.ip)
     if args.command in LAUNCHER_MAP:

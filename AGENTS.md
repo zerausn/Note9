@@ -5,7 +5,7 @@ the PC-side `open-claw` repo and a local Antigravity/OpenClaw proxy running
 on the Windows host.
 
 If you are another AI agent entering this repo, read this file first and
-then read [SESSION_NOTES_2026-03-30.md](./SESSION_NOTES_2026-03-30.md).
+then read [SESSION_NOTES_2026-03-31.md](./SESSION_NOTES_2026-03-31.md).
 
 ## Scope And Boundaries
 
@@ -51,6 +51,11 @@ Do not assume `gemini-3.1-flash`. The live model list verified on
 - Debian contains user `zerausn`
 - The old GUI launcher scripts still reference `droidmaster` and should be
   treated as stale unless rewritten
+- `openclaw` by itself prints CLI help
+- the usable terminal UI command is `openclaw tui`
+- `openclaw tui` needs `openclaw gateway` already running
+- the reliable automation path is now launcher scripts + `run-as com.termux`,
+  not UI typing
 
 ## Important Paths
 
@@ -73,20 +78,28 @@ Do not assume `gemini-3.1-flash`. The live model list verified on
   CLI launcher copied into Termux home
 - [launch_debian_xfce.sh](./launch_debian_xfce.sh)
   XFCE launcher copied into Termux home
+- [launch_openclaw_gateway.sh](./launch_openclaw_gateway.sh)
+  OpenClaw gateway launcher for Debian
+- [launch_openclaw_tui.sh](./launch_openclaw_tui.sh)
+  OpenClaw TUI launcher for Debian
+- [check_openclaw_health.sh](./check_openclaw_health.sh)
+  OpenClaw health checker for Debian
 
 ## Use These Commands First
 
 ```powershell
 python .\termux_bridge.py status
 python .\termux_bridge.py prepare-termux
-python .\termux_bridge.py reverse-openclaw
-python .\termux_bridge.py open-debian
+python .\termux_bridge.py openclaw-up
 ```
 
-For GUI attempts:
+For piecewise OpenClaw control:
 
 ```powershell
-python .\termux_bridge.py open-xfce
+python .\termux_bridge.py reverse-openclaw
+python .\termux_bridge.py openclaw-gateway
+python .\termux_bridge.py openclaw-health
+python .\termux_bridge.py openclaw-tui
 ```
 
 ## Known Pitfalls
@@ -103,6 +116,13 @@ python .\termux_bridge.py open-xfce
 - Do not assume Wi-Fi ADB is alive.
   Re-check `wlan0` from live ADB before using `adb connect`.
 - Prefer `adb reverse tcp:8045 tcp:8045` over LAN routing for the proxy.
+- Do not assume `openclaw` alone opens the app you want.
+  It prints help; use `openclaw tui`.
+- Do not assume `termux-run` or raw `adb shell input text` is reliable enough
+  for complex commands on this phone.
+- Do not assume one-shot shell autostart files in Termux will execute.
+  `.bashrc`, `.bash_profile`, `.profile`, and `.bash_login` were tested and
+  did not auto-fire in the way hoped for.
 
 ## If You Need To Inspect The Phone Again
 
@@ -122,7 +142,8 @@ adb shell run-as com.termux /data/data/com.termux/files/usr/bin/proot-distro log
 2. Keep Termux automation reproducible through `termux_bridge.py`.
 3. Use `adb reverse` so Debian/Termux can reach the PC proxy on localhost.
 4. Use Debian as the Linux environment for `openclaw`.
-5. Finish SSH and Wi-Fi ADB later, but do not block current work on them.
+5. Use `openclaw-up` as the preferred automation path for daily use.
+6. Finish SSH later, but do not block the current TUI/gateway path on it.
 
 ## Related But Separate Root Snapshot
 
@@ -142,6 +163,6 @@ If you change the real operational path, update all three:
 
 1. `README.md`
 2. `AGENTS.md`
-3. `SESSION_NOTES_2026-03-30.md` or a newer dated session note
+3. the newest `SESSION_NOTES_YYYY-MM-DD.md`
 
 This repo is being used as living operational memory, not just code storage.
