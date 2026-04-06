@@ -74,6 +74,10 @@ Do not assume `gemini-3.1-flash`. The live model list verified on
 
 - [termux_bridge.py](./termux_bridge.py)
   Main Windows-side helper
+- [Abrir_Note9_scrcpy.bat](./Abrir_Note9_scrcpy.bat)
+  Current scrcpy launcher for the Note9 using bundled ADB when available
+- [configurar_wifi.bat](./configurar_wifi.bat)
+  Current helper to re-enable Wi-Fi ADB from USB
 - [launch_debian_openclaw.sh](./launch_debian_openclaw.sh)
   CLI launcher copied into Termux home
 - [launch_debian_xfce.sh](./launch_debian_xfce.sh)
@@ -84,6 +88,8 @@ Do not assume `gemini-3.1-flash`. The live model list verified on
   OpenClaw TUI launcher for Debian
 - [check_openclaw_health.sh](./check_openclaw_health.sh)
   OpenClaw health checker for Debian
+- [legacy/dex-flow/](./legacy/dex-flow)
+  Archived DeX / Flow automation from the old root snapshot
 
 ## Use These Commands First
 
@@ -166,3 +172,7 @@ If you change the real operational path, update all three:
 3. the newest `SESSION_NOTES_YYYY-MM-DD.md`
 
 This repo is being used as living operational memory, not just code storage.
+
+If the work comes from the old umbrella root snapshot, be explicit about which
+items were promoted into this repo and which stayed archived under
+`C:\Users\ZN-\Documents\Antigravity\workspace-local\note9-ops\root-legacy`.
