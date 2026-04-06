@@ -34,6 +34,11 @@ OpenAI-compatible proxy used by the phone.
 - [termux_bridge.py](./termux_bridge.py)
   Central CLI to inspect ADB state, prepare Termux, expose the PC proxy
   to the phone, and launch Debian/XFCE from Windows.
+- [Abrir_Note9_scrcpy.bat](./Abrir_Note9_scrcpy.bat)
+  Windows helper to open the Note9 over `scrcpy` using the bundled ADB path.
+- [configurar_wifi.bat](./configurar_wifi.bat)
+  Windows helper to switch the phone to `adb tcpip 5555` and print current
+  Wi-Fi state before attempting `adb connect`.
 - [launch_debian_openclaw.sh](./launch_debian_openclaw.sh)
   Device-side launcher for the Debian CLI where `openclaw` is installed.
 - [launch_debian_xfce.sh](./launch_debian_xfce.sh)
@@ -50,6 +55,9 @@ OpenAI-compatible proxy used by the phone.
   Device-side launcher for `openclaw tui` inside Debian.
 - [check_openclaw_health.sh](./check_openclaw_health.sh)
   Device-side launcher for `openclaw health` inside Debian.
+- [legacy/dex-flow/](./legacy/dex-flow)
+  Archived DeX / Samsung Flow automation and handoff material rescued from
+  the old root snapshot.
 
 ## Quick Start
 
@@ -66,6 +74,13 @@ If you want the full OpenClaw flow with no manual terminal typing on the PC:
 
 ```powershell
 python .\termux_bridge.py openclaw-up
+```
+
+If you only want screen mirroring or Wi-Fi ADB helpers:
+
+```powershell
+.\Abrir_Note9_scrcpy.bat
+.\configurar_wifi.bat
 ```
 
 If you want to manage the pieces separately:
@@ -228,6 +243,22 @@ contained `gemini-3-flash`.
   enough for complex commands on this Samsung build.
 - one-shot shell autostart through `.bashrc`, `.bash_profile`, `.profile`,
   and `.bash_login` was attempted and did not fire automatically in Termux.
+
+## Legacy Root Snapshot
+
+The old `Antigravity` root used to double as a working copy of `Note9`, which
+left extra DeX / Flow scripts and machine-local artifacts mixed with the new
+umbrella workspace.
+
+That second-wave cleanup was split like this:
+
+- current utilities promoted into this repo
+- older DeX / Flow automation moved into [`legacy/dex-flow/`](./legacy/dex-flow)
+- bulky or machine-specific artifacts kept in the local workspace archive
+
+Local archive path:
+
+`C:\Users\ZN-\Documents\Antigravity\workspace-local\note9-ops\root-legacy`
 
 ## Recommended Next Steps
 
