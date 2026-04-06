@@ -1,0 +1,22 @@
+{
+  "project_name": "note9",
+  "base_branch": "main",
+  "branch_prefix": "codex/",
+  "git": {
+    "push_remote": "origin",
+    "base_remote": "origin"
+  },
+  "validation": {
+    "local": [
+      "python -m compileall auto_bixby_macro.py brain_agent.py debug_brain.py dex_agent.py local_agent.py local_agent_voice.py lux_dex_starter.py setup_routines.py termux_bridge.py"
+    ],
+    "ci": [
+      "python -m compileall auto_bixby_macro.py brain_agent.py debug_brain.py dex_agent.py local_agent.py local_agent_voice.py lux_dex_starter.py setup_routines.py termux_bridge.py",
+      "bash -n launch_debian_openclaw.sh launch_debian_xfce.sh launch_openclaw_gateway.sh launch_openclaw_tui.sh check_openclaw_health.sh"
+    ]
+  },
+  "pull_request": {
+    "enabled": true,
+    "draft": true
+  }
+}
