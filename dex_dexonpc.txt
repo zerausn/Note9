@@ -1,0 +1,1370 @@
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.hardware.usb.action.USB_STATE:
+        b224b4a com.sec.android.app.dexonpc/.service.DOPUsbStateReceiver filter 43f54fc
+          Action: "android.hardware.usb.action.USB_STATE"
+          Action: "android.app.action.ENTER_CAR_MODE"
+          Action: "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
+      android.app.action.ENTER_CAR_MODE:
+        b224b4a com.sec.android.app.dexonpc/.service.DOPUsbStateReceiver filter 43f54fc
+          Action: "android.hardware.usb.action.USB_STATE"
+          Action: "android.app.action.ENTER_CAR_MODE"
+          Action: "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
+      com.samsung.intent.action.EMERGENCY_STATE_CHANGED:
+        b224b4a com.sec.android.app.dexonpc/.service.DOPUsbStateReceiver filter 43f54fc
+          Action: "android.hardware.usb.action.USB_STATE"
+          Action: "android.app.action.ENTER_CAR_MODE"
+          Action: "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
+
+Permissions:
+  Permission [dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO] (5c6cabb):
+    sourcePackage=com.sec.android.app.dexonpc
+    uid=1000 gids=null type=0 prot=signature|privileged
+    perm=Permission{f0b7bd8 dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO}
+    packageSetting=PackageSetting{b4dbb13 com.sec.android.app.dexonpc/1000}
+
+Permissions:
+  Permission [com.sec.android.app.dexonpc.permission.provider.READ_VALUE] (8afbb31):
+    sourcePackage=com.sec.android.app.dexonpc
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{6c1d216 com.sec.android.app.dexonpc.permission.provider.READ_VALUE}
+    packageSetting=PackageSetting{b4dbb13 com.sec.android.app.dexonpc/1000}
+
+Permissions:
+  Permission [com.sec.android.app.dexonpc.permission.provider.WRITE_VALUE] (18d5797):
+    sourcePackage=com.sec.android.app.dexonpc
+    uid=1000 gids=null type=0 prot=signature
+    perm=Permission{fa87d84 com.sec.android.app.dexonpc.permission.provider.WRITE_VALUE}
+    packageSetting=PackageSetting{b4dbb13 com.sec.android.app.dexonpc/1000}
+
+Registered ContentProviders:
+  com.sec.android.app.dexonpc/.contentprovider.multipreference.DOPProvider:
+    Provider{913d96d com.sec.android.app.dexonpc/.contentprovider.multipreference.DOPProvider}
+  com.sec.android.app.dexonpc/androidx.core.content.FileProvider:
+    Provider{100f9a2 com.sec.android.app.dexonpc/androidx.core.content.FileProvider}
+
+ContentProvider Authorities:
+  [com.sec.android.app.dexonpc.contentprovider.multipreference.DOPProvider]:
+    Provider{913d96d com.sec.android.app.dexonpc/.contentprovider.multipreference.DOPProvider}
+      applicationInfo=ApplicationInfo{ec5d633 com.sec.android.app.dexonpc}
+  [com.sec.android.app.dexonpc.fileprovider]:
+    Provider{100f9a2 com.sec.android.app.dexonpc/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{ec5d633 com.sec.android.app.dexonpc}
+
+Key Set Manager:
+  [com.sec.android.app.dexonpc]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.sec.android.app.dexonpc] (b4dbb13):
+    userId=1000
+    sharedUser=SharedUserSetting{f8a8cfa android.uid.system/1000}
+    pkg=Package{86866e5 com.sec.android.app.dexonpc}
+    codePath=/system/priv-app/DeXonPC
+    resourcePath=/system/priv-app/DeXonPC
+    legacyNativeLibraryDir=/system/priv-app/DeXonPC/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=130101001 minSdk=28 targetSdk=29
+    versionName=1.3.01.1
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{ec5d633 com.sec.android.app.dexonpc}
+    flags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVILEGED ]
+    dataDir=/data/user/0/com.sec.android.app.dexonpc
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 10:00:00
+    firstInstallTime=2008-12-31 10:00:00
+    lastUpdateTime=2008-12-31 10:00:00
+    installerPackageName=com.sec.android.app.samsungapps
+    signatures=PackageSignatures{ff1edf0 version:2, signatures:[b378e95c], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ SYSTEM HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]
+    declared permissions:
+      com.sec.android.app.dexonpc.permission.provider.READ_VALUE: prot=signature, INSTALLED
+      com.sec.android.app.dexonpc.permission.provider.WRITE_VALUE: prot=signature, INSTALLED
+      dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO: prot=signature|privileged, INSTALLED
+    requested permissions:
+      android.permission.READ_CLIPBOARD_IN_BACKGROUND
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.BLUETOOTH
+      com.samsung.android.permission.SSRM_NOTIFICATION_PERMISSION
+      dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO
+      com.sec.spp.permission.TOKEN_8725d09a0215aac4207cd5bb2d186517baff2fb6ed457a021509e0548e16ebdaf76262d34c91f4d421ea7792b90c32945bb7e91fd1b6577b19d240f8deda67b05d750999d0edd32f01c1603bd4eee1b8a8678bd856cc968a22fe20df923b3ea0206d295b5d984363831856df6e8420e8cd55c3645bcc27e6f3d0c99138251fd1
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.INTERACT_ACROSS_USERS
+      android.permission.CONFIGURE_WIFI_DISPLAY
+      com.samsung.android.oneconnect.permission.START_SERVICE
+      com.samsung.android.oneconnect.permission.READ_CLOUD_LOCATION_PROVIDER
+    install permissions:
+      com.samsung.android.service.aircommand.permission.ACCESS_AIRCOMMAND: granted=true
+      android.permission.REAL_GET_TASKS: granted=true
+      com.samsung.accessory.permission.TRANSPORTING_NOTIFICATION_ITEM: granted=true
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      com.samsung.android.hostmanager.permission.WRITE_APP_REGISTRY: granted=true
+      android.permission.BIND_INCALL_SERVICE: granted=true
+      com.samsung.android.carrier.permission.UPDATE_CARRIER: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      com.sec.android.fota.permission.PUSH: granted=true
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      android.permission.CONTROL_KEYGUARD: granted=true
+      com.samsung.android.voicewakeup.permission.READ_SETTING_PROVIDER: granted=true
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS: granted=true
+      android.permission.SET_PROCESS_LIMIT: granted=true
+      com.samsung.android.knox.permission.KNOX_CONTAINER: granted=true
+      com.samsung.android.launcher.permission.WRITE_SETTINGS: granted=true
+      dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO: granted=true
+      com.samsung.android.security.permission.SAMSUNG_KEYSTORE_PERMISSION: granted=true
+      com.samsung.android.bixby.agent.permission.BIXBY_SERVICE_AVAILABLE_CHANGE: granted=true
+      com.samsung.permission.WIFI_READ_MAC_ADDRESS: granted=true
+      com.samsung.android.providers.contacts.permission.REQUEST_QUERY_COUNT: granted=true
+      android.permission.BIND_ATTENTION_SERVICE: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      com.dsi.ant.permission.ANTRADIO: granted=true
+      android.permission.RESTART_PACKAGES: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      com.samsung.android.permission.MODIFY_THEME: granted=true
+      com.samsung.android.sdm.config.permission.RECEIVE_CONFIG_CHANGED: granted=true
+      android.permission.BIND_DEVICE_ADMIN: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      com.samsung.systemui.permission.FACE_WIDGET: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      com.samsung.android.app.cocktailbarservice.permission.BIXBY_PROVIDER: granted=true
+      com.samsung.ims.permission.hdvoicesettinginfo: granted=true
+      com.samsung.android.permission.LOCK_TASK_MODE: granted=true
+      com.samsung.android.knox.permission.KNOX_CUSTOM_SEALEDMODE: granted=true
+      android.permission.READ_WIFI_CREDENTIAL: granted=true
+      com.sec.android.personalization.permission.KEYSTRING: granted=true
+      com.samsung.android.permission.FAST_WIRELESS_CHARGING_CONTROL: granted=true
+      com.samsung.android.rubin.context.permission.READ_CONTEXT_MANAGER: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      com.samsung.permission.WIFI_DIAGNOSTICS_PROVIDER: granted=true
+      android.permission.USE_RESERVED_DISK: granted=true
+      com.samsung.android.camera.iris.permission.USE_IRIS: granted=true
+      com.samsung.permission.SETTINGS_INAPP_NOTI: granted=true
+      com.samsung.android.mobileservice.permission.RECEIVE_SEMS_BROADCAST: granted=true
+      com.sec.android.providers.simmobility.permission.READ_SIMMOBILITY: granted=true
+      com.samsung.android.settings.intelligence.READ_JUMP_TO_APP_PROVIDER: granted=true
+      com.samsung.android.provider.indexing.permission.ACCESS_PROVIDER: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      com.samsung.android.app.talkback.permission.LABELING: granted=true
+      com.samsung.android.mdecservice.PERMISSION: granted=true
+      com.sec.imsservice.PERMISSION: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.MONITOR_DEFAULT_SMS_PACKAGE: granted=true
+      com.samsung.permission.HOME_TRIPLE_CLICK: granted=true
+      android.permission.BROADCAST_PHONE_ACCOUNT_REGISTRATION: granted=true
+      com.samsung.permission.dc.INVOKE_DC_METHOD: granted=true
+      com.sec.permission.UPLUS_SETTINGS: granted=true
+      com.sec.android.app.desktoplauncher.permission.OPEN_DEX_SETTINGS: granted=true
+      com.samsung.android.permission.RUN_DISK_DEFRAGMENTATION: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.PROVIDE_TRUST_AGENT: granted=true
+      android.permission.BROADCAST_CALLLOG_INFO: granted=true
+      com.sec.android.app.desktoplauncher.permission.WRITE_PREFFERENCE: granted=true
+      android.permission.MANAGE_SOUND_TRIGGER: granted=true
+      android.permission.SEND_RESPOND_VIA_MESSAGE: granted=true
+      com.sec.vsimservice.PERMISSION: granted=true
+      com.sec.enterprise.permission.MDM_PROXY_ADMIN_INTERNAL: granted=true
+      com.samsung.permission.WIFI_WIPS: granted=true
+      com.sec.android.app.factorymode.permission.KEYSTRING: granted=true
+      android.permission.SHUTDOWN: granted=true
+      com.samsung.android.knox.permission.KNOX_AUDIT_LOG: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      com.sec.phone.permission.SEC_FACTORY_PHONE: granted=true
+      android.permission.NFC: granted=true
+      com.sec.android.app.wlantest.permission.USE_WLAN_TEST: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      com.samsung.android.scloud.app.permission.BROADCAST: granted=true
+      com.sec.android.app.SecSetupWizard.permission.SHOW_SETUP_WIZARD: granted=true
+      com.samsung.android.app.omcagent.permission.C2D_MESSAGE: granted=true
+      com.samsung.android.app.aodservice.permission.AOD_PROVIDER: granted=true
+      com.samsung.rmt_exercise.permission.KEYSTRING: granted=true
+      com.vodafone.vodafone360updates.permission.SHOW_SETUP_WIZARD: granted=true
+      com.samsung.adaptivebrightnessgo.permission.SEM_ADAPTIVE_BRIGHTNESS: granted=true
+      com.sec.ims.nsds.OPEN_WEBSHEET: granted=true
+      com.samsung.android.oneconnect.permission.WRITE_EXTERNAL_SETTINGS_PROVIDER: granted=true
+      com.samsung.android.app.talkback.feedback.permission.TALKBACK: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      com.sec.permission.preconfig: granted=true
+      com.samsung.android.mcfserver.permission.USE_PROVIDER_API: granted=true
+      com.samsung.android.forest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.BIND_WALLPAPER: granted=true
+      com.sec.android.provider.badge.permission.READ: granted=true
+      android.permission.START_ANY_ACTIVITY: granted=true
+      com.sec.android.app.desktoplauncher.permission.RECEIVE_LAUNCH_BROADCASTS: granted=true
+      com.samsung.android.bixby.agent.permission.READ_SETTINGS: granted=true
+      com.samsung.android.rubin.app.ui.permission.LAUNCH_RUBIN_SETTING: granted=true
+      android.permission.BROADCAST_SMS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      com.samsung.android.oneconnect.permission.START_SERVICE: granted=true
+      android.permission.MANAGE_DYNAMIC_SYSTEM: granted=true
+      com.samsung.android.scloud.backup.lib.write: granted=true
+      com.sec.imsservice.READ_IMS_PERMISSION: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.qualcomm.permission.QCOM_DIAG: granted=true
+      com.wssnps.permission.COM_WSSNPS: granted=true
+      com.samsung.android.settings.permission.ACCESS_APP_LIST_CACHE: granted=true
+      com.samsung.android.bixby.service.bixbysearch.permission.BIXBY_SEARCH: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      com.sec.android.settings.permission.SOFT_RESET: granted=true
+      com.samsung.cmh.data.READ: granted=true
+      android.permission.MANAGE_ROLE_HOLDERS: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      com.samsung.permission.READ_SEC_COMMON_POLICY: granted=true
+      com.sec.android.diagmonagent.permission.DIAGMON: granted=true
+      com.sec.android.emergencymode.permission.LAUNCH_EMERGENCYMODE_SERVICE: granted=true
+      com.sec.android.provider.emergencymode.WRITE_DATABASE: granted=true
+      com.samsung.android.permission.SEM_MEDIA_CONTENTS: granted=true
+      android.permission.READ_PRINT_SERVICES: granted=true
+      com.samsung.clipboardsaveservice.CLIPBOARDSAVESERVICE_PERMISSION: granted=true
+      android.permission.EXPAND_STATUS_BAR: granted=true
+      com.android.launcher.permission.UNINSTALL_SHORTCUT: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      com.samsung.android.app.assistantmenu.permission.READ_WRITE: granted=true
+      com.samsung.android.dsms.permission.SEND_MESSAGE: granted=true
+      com.samsung.android.email.permission.ACCESS_PROVIDER: granted=true
+      com.samsung.android.aremoji.provider.permission.READ_STICKER_PROVIDER: granted=true
+      android.permission.CAPTURE_AUDIO_HOTWORD: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.CONTROL_DISPLAY_SATURATION: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      com.sec.android.app.DataCreate.permission.KEYSTRING: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.ACCESS_SURFACE_FLINGER: granted=true
+      android.permission.AUTHENTICATE_ACCOUNTS: granted=true
+      android.permission.INTERNET: granted=true
+      com.sec.nsds.READ_NSDS_PERMISSION: granted=true
+      com.sec.ims.nsds.READ_NSDS_PERMISSION: granted=true
+      com.sec.nsds.WRITE_NSDS_PERMISSION: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      com.samsung.android.permission.COVER: granted=true
+      com.sec.android.app.applinker.permission.RECEIVE: granted=true
+      com.samsung.android.permission.WRITE_CAPTURED_URL: granted=true
+      com.sec.android.app.setupwizardlegalprovider.GETDOCUMENT: granted=true
+      com.samsung.android.knox.permission.KNOX_DEVICE_CONFIGURATION: granted=true
+      android.permission.GET_INTENT_SENDER_INTENT: granted=true
+      com.samsung.android.rubin.persona.permission.READ_PERSONA_MANAGER: granted=true
+      com.sec.factory.permission.KEYSTRING: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      com.sec.android.providers.mapcon.permission.WRITE_MAPCON: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.READ_PRECISE_PHONE_STATE: granted=true
+      com.sec.android.diagmonagent.permission.DIAGMON_SURVEY: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      com.qualcomm.permission.IZAT: granted=true
+      com.sec.android.app.selftestmode.permission.KEYSTRING: granted=true
+      com.samsung.android.hostmanager.permission.ACCESS_UNIFIED_HOST_MANAGER: granted=true
+      com.sec.ims.nsds.WRITE_NSDS_PERMISSION: granted=true
+      android.permission.BIND_CONNECTION_SERVICE: granted=true
+      android.permission.ACCESS_INSTANT_APPS: granted=true
+      com.sec.android.provider.emergencymode.READ_DATABASE: granted=true
+      android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS: granted=true
+      com.sec.android.phone.permission.AT_COMMAND: granted=true
+      android.permission.GET_PACKAGE_SIZE: granted=true
+      com.samsung.android.knox.permission.KPM_OPERATION_REQUEST_INFORM_ACTION_INTERNAL: granted=true
+      android.permission.MANAGE_USB: granted=true
+      com.sec.android.app.applinker.permission.READ_EXTRA: granted=true
+      com.sec.android.provider.samsungapps.permission.WRITE: granted=true
+      com.samsung.permission.DIRECT_ACCESS: granted=true
+      com.samsung.android.messaging.permission.READ_MESSAGE: granted=true
+      android.permission.ACCESS_ALL_DOWNLOADS: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      com.samsung.android.scloud.permission.TRIGGER_BACKUP_SYNC: granted=true
+      com.sec.epdg.PERMISSION: granted=true
+      android.permission.BIND_APPWIDGET: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      com.sec.android.app.servicemodeapp.permission.KEYSTRING: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      com.samsung.android.provider.filterprovider.permission.READ_FILTER: granted=true
+      com.samsung.android.bixby.permission.WAKEUP_LAUNCH_BIXBY: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      com.sec.android.app.bluetoothtest.permission.KEYSTRING: granted=true
+      android.permission.MANAGE_DEBUGGING: granted=true
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.SET_ACTIVITY_WATCHER: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      com.sec.android.app.desktoplauncher.permission.READ_PREFFERENCE: granted=true
+      android.permission.STATUS_BAR_SERVICE: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      com.dsi.ant.permission.ANT: granted=true
+      com.samsung.android.honeyboard.permission.PLUGIN: granted=true
+      android.permission.USE_FULL_SCREEN_INTENT: granted=true
+      com.samsung.android.mcfserver.permission.START_SERVICE: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      com.samsung.android.bixby.agent.permission.READ_LANGUAGE: granted=true
+      android.permission.ACCESS_IMS_CALL_SERVICE: granted=true
+      com.samsung.android.keyguardwallpaperupdator.SET_MULTIPLE_WALLPAPER_PROVIDER: granted=true
+      com.samsung.permission.SEM_ACCESS_WIFI_SECURED_INFO: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      com.samsung.accessory.manager.permission.AUTHENTICATION_CONTROL: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      com.sec.vsimservice.READ_PERMISSION: granted=true
+      com.sec.enterprise.knox.permission.KNOX_SEAMS: granted=true
+      com.sec.sveservice.PERMISSION: granted=true
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.USE_BIOMETRIC_INTERNAL: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      com.sec.android.permission.DSMLAWMO: granted=true
+      android.permission.ACCESS_KEYGUARD_SECURE_STORAGE: granted=true
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      com.sec.settings.accessibility.permission.TOGGLE_TALK_BACK: granted=true
+      com.sec.enterprise.knox.cloudmdm.smdms.provider.permission.READ: granted=true
+      com.sec.factory.permission.BT_ID_WRITE: granted=true
+      android.permission.OBSERVE_APP_USAGE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.DELETE_CACHE_FILES: granted=true
+      android.permission.SET_WALLPAPER_COMPONENT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      com.sec.android.app.samsungapps.accesspermission.UPDATE_EXISTS: granted=true
+      com.qualcomm.permission.ACCESS_GTPWIFI_CROWDSOURCING_API: granted=true
+      android.permission.ACCESS_MTP: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      com.samsung.cmh.data.WRITE: granted=true
+      com.sec.android.inputmethod.permission.KEYBOARD_SETTING: granted=true
+      com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS: granted=true
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      com.qualcomm.permission.ACCESS_GTPWWAN_API: granted=true
+      android.permission.READ_LOGS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      com.samsung.android.weather.permission.SETUP_WIZARD: granted=true
+      com.samsung.android.scloud.backup.lib.read: granted=true
+      com.samsung.android.knox.permission.KNOX_ENTERPRISE_DEVICE_ADMIN: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      com.samsung.android.messaging.permission.WRITE_MESSAGE: granted=true
+      com.sec.android.providers.mapcon.permission.READ_MAPCON: granted=true
+      com.samsung.android.permission.SEM_WRITE_CAPTURED_URL: granted=true
+      com.sec.android.app.dexonpc.permission.provider.READ_VALUE: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      com.sec.mhs.smarttethering.RECEIVE_SMARTTETHERING: granted=true
+      com.samsung.android.app.omcagent.permission.WRITE_PROVIDER: granted=true
+      com.google.android.setupwizard.SETUP_COMPAT_SERVICE: granted=true
+      com.sec.android.daemonapp.ap.accuweather.ACCUWEATHER_DAEMON_ACCESS_PROVIDER: granted=true
+      com.sec.imsservice.WRITE_IMS_PERMISSION: granted=true
+      com.sec.imslogger.permission.SERVICE: granted=true
+      com.samsung.android.app.telephonyui.permission.USE_PHONE_VOICE_RECORDER: granted=true
+      com.sec.pcw.device.permission.SITDM: granted=true
+      com.sec.enterprise.knox.MDM_CONTENT_PROVIDER: granted=true
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.KILL_BACKGROUND_PROCESSES: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      com.samsung.android.camera.iris.permission.RESET_IRIS_LOCKOUT: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      com.sec.knox.APK_INSTALL_LWC: granted=true
+      com.sec.android.provider.badge.permission.WRITE: granted=true
+      com.samsung.permission.HRM_EXT: granted=true
+      android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS: granted=true
+      com.samsung.android.settings.permission.ACCESS_EPISODE: granted=true
+      com.samsung.accessibility.permission.WRITE_SETTINGS: granted=true
+      com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS: granted=true
+      com.samsung.android.game.gamehome.permission.WRITE_CONTENT: granted=true
+      com.samsung.android.samsungaccount.permission.ACCESS_SASETTINGS: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      com.sec.ImsTelephonyService.EPDN: granted=true
+      android.permission.MOUNT_FORMAT_FILESYSTEMS: granted=true
+      com.sec.testingsettings.permission.KEYSTRING: granted=true
+      com.samsung.android.settings.directaction.DIRECTACTION_PROVIDER: granted=true
+      android.permission.REQUEST_DELETE_PACKAGES: granted=true
+      com.samsung.permission.WRITE_SM_DATA: granted=true
+      android.permission.SUSPEND_APPS: granted=true
+      com.sec.android.permission.VOIP_INTERFACE: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      com.samsung.android.knox.permission.KNOX_KIOSK_MODE: granted=true
+      com.samsung.android.scloud.app.ui: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CLEAR_APP_CACHE: granted=true
+      com.sec.enterprise.knox.cloudmdm.smdms.permission.SAMSUNG_MDM_SERVICE: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      com.sec.android.app.desktoplauncher.permission.WRITE_SETTINGS: granted=true
+      android.permission.BIND_SETTINGS_SUGGESTIONS_SERVICE: granted=true
+      com.samsung.android.permission.FINGERPRINT_PRIVILEGED: granted=true
+      android.permission.TEST_BLACKLISTED_PASSWORD: granted=true
+      android.permission.MANAGE_NETWORK_POLICY: granted=true
+      com.qualcomm.permission.ACCESS_GTPWIFI_API: granted=true
+      com.samsung.android.sskds.permission.SSKDS_ATTK_SETUP: granted=true
+      com.samsung.android.knox.permission.KNOX_LICENSE_INTERNAL: granted=true
+      com.samsung.android.oneconnect.permission.READ_EXTERNAL_SETTINGS_PROVIDER: granted=true
+      android.permission.GRANT_RUNTIME_PERMISSIONS: granted=true
+      com.sec.android.provider.samsungapps.permission.READ: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON: granted=true
+      com.sec.android.app.dexonpc.permission.provider.WRITE_VALUE: granted=true
+      com.samsung.android.oneconnect.permission.READ_CLOUD_LOCATION_PROVIDER: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      com.samsung.android.camera.iris.permission.MANAGE_IRIS: granted=true
+      com.samsung.android.game.gamehome.permission.READ_CONTENT: granted=true
+      android.permission.SEND_SHOW_SUSPENDED_APP_DETAILS: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.SET_WALLPAPER_HINTS: granted=true
+      com.samsung.android.app.galaxyfinder.permission.ACCESS_APPLICATION_PROVIDER: granted=true
+      com.qualcomm.permission.ACCESS_GTPWWAN_CROWDSOURCING_API: granted=true
+      com.msc.openprovider.OpenContentProvider.READ_CONTENT: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.START_ACTIVITIES_FROM_BACKGROUND: granted=true
+      com.sec.android.voltesettings.permission.KEYSTRING: granted=true
+      com.samsung.bluetooth.permission.BLUETOOTH_DEVICE: granted=true
+      com.sec.vsimservice.WRITE_PERMISSION: granted=true
+      android.permission.BROADCAST_PACKAGE_REMOVED: granted=true
+      com.samsung.android.permission.SSRM_NOTIFICATION_PERMISSION: granted=true
+      com.sec.android.fotaclient.permission.FOTA: granted=true
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      com.samsung.permission.WIFI_FACTORY_TEST: granted=true
+      com.samsung.android.voicewakeup.permission.EXECUTE_UTTERANCE_RECORD_SERVICE: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      com.samsung.adaptivebrightnessgo.permission.ADAPTIVE_BRIGHTNESS_PERMISSION: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      com.samsung.android.mdec.provider.setting.CMC_ES_PERMISSION: granted=true
+      android.permission.HANDLE_CALL_INTENT: granted=true
+      android.permission.VIBRATE: granted=true
+      com.sec.android.providers.simmobility.permission.WRITE_SIMMOBILITY: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      com.sec.android.easyMover.permission.RUN_AGENT: granted=true
+      com.samsung.android.permission.READ_TILE_SUMMARY: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      com.osp.contentprovider.OSPContentProvider.READ_CONTENT: granted=true
+      com.samsung.android.app.omcagent.permission.READ_PROVIDER: granted=true
+      android.permission.INVOKE_CARRIER_SETUP: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      com.samsung.android.permission.CALL_OVERLAY_MAGNIFIER: granted=true
+      com.sec.modem.settings.permission.KEYSTRING: granted=true
+      sec.android.permission.READ_MSG_PREF: granted=true
+      com.samsung.rcs.im.READ_PERMISSION: granted=true
+      com.sec.android.diagmonagent.permission.PROVIDER: granted=true
+      com.samsung.android.unifiedwfc.VOWIFI_PROVISIONING_PERMISSION: granted=true
+      android.permission.READ_CLIPBOARD_IN_BACKGROUND: granted=true
+      com.samsung.android.knox.permission.KNOX_UCM_PLUGIN_SERVICE: granted=true
+      android.permission.MANAGE_SCOPED_ACCESS_DIRECTORY_PERMISSIONS: granted=true
+      com.samsung.android.sm.permission.BIND_DEVICE_SECURITY: granted=true
+      com.sec.android.app.hiddenmenu.permission.KEYSTRING: granted=true
+      android.permission.CRYPT_KEEPER: granted=true
+      com.sec.android.app.lcdtest.permission.KEYSTRING: granted=true
+      com.samsung.accessory.permission.ACCESSORY_FRAMEWORK: granted=true
+      com.att.iqi.permission.RECEIVE_APP_STATE_BROADCASTER_STATE: granted=true
+      com.samsung.android.game.gamehome.permission.INVOKE: granted=true
+      android.permission.NOTIFY_PENDING_SYSTEM_UPDATE: granted=true
+      com.samsung.android.providers.media.READ: granted=true
+      com.sec.android.app.phoneutil.permission.KEYSTRING: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      com.samsung.contacts.permission.THEME: granted=true
+      android.permission.USE_BIOMETRIC: granted=true
+      com.samsung.android.app.assistantmenu.permission.ADVERTISE_ASSISTANTMENU: granted=true
+      com.dsi.ant.permission.ANT_ADMIN: granted=true
+      android.permission.MANAGE_APP_OPS_MODES: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      com.sec.enterprise.knox.permission.MDM_ENTERPRISE_TIMA_NOTIFICATION: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
+      android.permission.STATUS_BAR: granted=true
+      com.osp.app.signin.BROADCAST_PERMISSION: granted=true
+      com.sec.permission.AssistiveLight_ONOFF: granted=true
+      com.samsung.android.permission.wirelesspowersharing: granted=true
+      com.samsung.permission.HQM_NOTIFICATION_PERMISSION: granted=true
+      android.permission.DUMP: granted=true
+      com.samsung.permission.LAUNCH_SOFTWARE_UPDATE: granted=true
+      android.permission.sec.MDM_AUDIT_LOG: granted=true
+      android.permission.READ_DEVICE_CONFIG: granted=true
+      com.samsung.android.launcher.permission.READ_SETTINGS: granted=true
+      com.sec.factory.permission.ALLOWFTCLIENTCPOBIND: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      com.sec.android.app.desktoplauncher.permission.RECEIVE_FIRST_LOAD_BROADCAST: granted=true
+      com.samsung.android.knox.permission.KNOX_CUSTOM_SYSTEM: granted=true
+      com.samsung.permission.SSENSOR: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      com.samsung.android.knox.permission.KNOX_ANALYTICS_INTERNAL: granted=true
+      com.samsung.sec.android.application.csc: granted=true
+      android.permission.INJECT_EVENTS: granted=true
+      com.samsung.accessibility.bixby.permission.BIXBY_PROVIDER: granted=true
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      com.sec.android.app.desktoplauncher.permission.READ_SETTINGS: granted=true
+      com.samsung.android.soagent.permission.ACCESSORY: granted=true
+      com.samsung.android.settings.intelligence.READ_SETTINGS_SEARCH_DATA_PROVIDER: granted=true
+      com.samsung.android.service.svcagent.permission.FENRIR_AT_COMMAND: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      com.android.homescreen.home.permission.preview_image: granted=true
+      android.permission.OPEN_ACCESSIBILITY_DETAILS_SETTINGS: granted=true
+      com.samsung.android.app.omcagent.permission.OMC: granted=true
+      com.samsung.systemui.permission.KEYGUARD_IMAGE: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+      com.samsung.permission.READ_SM_DATA: granted=true
+      com.samsung.android.app.clockpack.LOCK_PROVIDER: granted=true
+      com.samsung.android.permission.SEM_AUTO_BIND_NOTIFICATION_LISTENER_SERVICE: granted=true
+    User 0: ceDataInode=639197 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk
+    User 10: ceDataInode=3211654 installed=true hidden=false suspended=false stopped=true notLaunched=false enabled=2 instant=false virtual=false
+    User 150: ceDataInode=2830628 installed=true hidden=false suspended=false stopped=true notLaunched=false enabled=2 instant=false virtual=false
+
+SkippingApks:
+  name : 100Game_PERSONAL_4x4_PF36_2009_2.0.2.apk
+  name : AccessTmobile_TMO.apk
+  name : AdaptClient.apk
+  name : AdvancedCalling.apk
+  name : AmazonMDIP_CAN.apk
+  name : AmazonMDIP_USA.apk
+  name : AmazonShopping-32bit.apk
+  name : AmazonShopping-Android-22.6-Patron-32bit-release.apk
+  name : AmazonShopping-Android-24.3.2-patron-arm32-release-signed.apk
+  name : AmazonShopping_CAN.apk
+  name : AmazonShopping_USA.apk
+  name : AmazonVideo_SPR_stub.apk
+  name : AppSelect_ATT.apk
+  name : AttIqi_ATT.apk
+  name : AttSmartHelp_ATT.apk
+  name : BellMobileTV.apk
+  name : BellTVWidget.apk
+  name : CallGuardian_uscc.apk
+  name : CallProtect_ATT.apk
+  name : CallingPlus.apk
+  name : CarrierDeviceManager.apk
+  name : CarrierSetupWizard.apk
+  name : CarrierWifi.apk
+  name : Chameleon2.apk
+  name : CnnPanel.apk
+  name : Crane.apk
+  name : DMAT_Stub.apk
+  name : DeviceCheckup_TLS.apk
+  name : DriveMode_hvpl_ATT.apk
+  name : DumpCollector.apk
+  name : EmergencyAlert.apk
+  name : EntelPlay_5.0.apk
+  name : FBInstagram_stub.apk
+  name : Fast.apk
+  name : HuxExtension.apk
+  name : Ignite-telefonica.apk
+  name : Ignite-uscc.apk
+  name : IgniteVerizon.apk
+  name : Ignite_AIO.apk
+  name : JanskySettings.apk
+  name : LLKAgent.apk
+  name : LinkedIn_SamsungStub.apk
+  name : LoginClientUnbranded.apk
+  name : LoginClientUnbranded_sku.apk
+  name : LookoutFull_SPR.apk
+  name : Lookout_ATT.apk
+  name : Lookout_MTR.apk
+  name : Lookout_TMO.apk
+  name : MDIP.apk
+  name : MHSWrapperMTR.apk
+  name : MHSWrapperUSC.apk
+  name : MSSkype_stub.apk
+  name : MaftPreloadManagerAndroidApp-MovistarMX.apk
+  name : MaftPreloadManagerAndroidApp-TEF_LATAM.apk
+  name : MaftPreloadManagerAndroidApp-release-signed-tagged.apk
+  name : MetroAppStore_MTR.apk
+  name : MetroZone_MTR.apk
+  name : MeuTIM.apk
+  name : MinhaOi.apk
+  name : MnoDmClient.apk
+  name : MnoDmViewer.apk
+  name : MobileID.apk
+  name : MobileInstaller.apk
+  name : MobileSecurity_ATT.apk
+  name : MovistarPlayTGU_stub_v1.3_20190628.apk
+  name : MyATT_ATT.apk
+  name : MyAccount_FMC.apk
+  name : MyAccount_VMC.apk
+  name : MyBell.apk
+  name : MyCricket_AIO.apk
+  name : MyMetro_MTR.apk
+  name : MyRogers.apk
+  name : MyVerizonMobile.apk
+  name : MyVerizonService.apk
+  name : NameIDVPL_TMO.apk
+  name : NameID_MTR.apk
+  name : NaverV_N.apk
+  name : NetWise_AIO.apk
+  name : OBDM_Permissions.apk
+  name : OiApps.apk
+  name : OiAppsClube.apk
+  name : OiRecarga.apk
+  name : OiWiFi.apk
+  name : OmadmSpr.apk
+  name : OmadmSprHm.apk
+  name : OneDrive_Samsung_v3.apk
+  name : OneTalkDialer.apk
+  name : PhoneInfo2.apk
+  name : PrefAct.apk
+  name : Push_To_Talk_BMC.apk
+  name : QAS_DVC_MSP_VZW.apk
+  name : QoSIndicator_ATT.apk
+  name : RRO_AMX_stk1.apk
+  name : RRO_AMX_stk2.apk
+  name : RemoteSupport_ATT.apk
+  name : RetailMode_hvpl_ATT.apk
+  name : RogersNHL.apk
+  name : SDMHiddenMenu.apk
+  name : SNP_stub.apk
+  name : SamsungNACloudDreamNewIcon.apk
+  name : SamsungPayStub.apk
+  name : SecVVM_dream.apk
+  name : SecVVM_v2.apk
+  name : SecVVM_v3.apk
+  name : SelfCareMobile-6.0.3-prod-signed.apk
+  name : SimLock_TMO.apk
+  name : SmartHelp_ATT.apk
+  name : SmartWifi_Stub_ATT.apk
+  name : SpectrumCM.apk
+  name : SprWfc.apk
+  name : SprintAndroidExtension2.apk
+  name : SprintCallerID02.apk
+  name : SprintHub.apk
+  name : SprintZone.apk
+  name : StubUpdater.apk
+  name : TIGO_Sports_BO_v7.0719.apk
+  name : TelcelContenedor_Full.apk
+  name : Telus_MyAccount.apk
+  name : TmoVVM.apk
+  name : TmoWfcPrefV2.apk
+  name : UnifiedSettingService.apk
+  name : UnifiedTetheringProvision.apk
+  name : UnifiedVVM.apk
+  name : Upday.apk
+  name : VMS_stub.apk
+  name : VZWAPNService_VZW.apk
+  name : VZWAPNService_sku.apk
+  name : VisualVoiceMail_CCT_stub.apk
+  name : VisualVoiceMail_CHA_stub.apk
+  name : VisualVoiceMail_TFN_stub.apk
+  name : VisualVoiceMail_VZW_stub.apk
+  name : VisualVoicemailSpr.apk
+  name : VivoAppsClube.apk
+  name : VivoMaisApps.apk
+  name : Voicemail_AIO.apk
+  name : VzCloud.apk
+  name : VzwImsApiService.apk
+  name : WfcServiceV2.apk
+  name : WhatsAppDownloader.apk
+  name : YelpPanel.apk
+  name : ZVV_STK2_RRO.apk
+  name : ZVV_STK_RRO.apk
+  name : altice_music_2.0.apk
+  name : apps_brasil_signed_aligned.apk
+  name : canid_stub.apk
+  name : che_notification_6.apk
+  name : com.customermobile.preload.vzw.apk
+  name : deezer_5.4.13.62.apk
+  name : entel_peru_7-6-1.apk
+  name : instagram-stub-30-0-1.apk
+  name : instagram-stub-BR.apk
+  name : instagram-stub_45-1-22.apk
+  name : instagram-stub_52-0-3.apk
+  name : kolbi_5.0.19.apk
+  name : messenger-stub-30-0-1.apk
+  name : messenger-stub-BR.apk
+  name : messenger-stub_45-1-22.apk
+  name : messenger-stub_52-0-3.apk
+  name : miTelcel_Stub.apk
+  name : mitigo-bolivia-release_3.0.1_rc1.apk
+  name : mySaskTel.apk
+  name : myflow_cww_6-9-0-174.apk
+  name : noticias_aro_146.apk
+  name : ready2Go_ATT.apk
+  name : rro_psn_stk1.apk
+  name : rro_uwt_srk1.apk
+  name : rro_uwt_stk2.apk
+  name : rro_ztm_stk1.apk
+  name : rro_ztm_stk2.apk
+  name : rro_ztr_stk1.apk
+  name : rro_ztr_stk2.apk
+  name : talkback.apk
+  name : tickantel_1-8-1.apk
+  name : tigomoney_stub_signed_v1.1.apk
+  name : tigoshop-bv-v1.3.0.apk
+  name : trendy_aro_28.apk
+  name : tuapp_4-0-2-4.apk
+  name : veramas_1-17-5.apk
+  name : veratv_2-4-0.apk
+  name : videotron_usercentre_plus.apk
+  name : virginmobile_mybenefits.apk
+  name : vzw_msdc_api.apk
+  name : wssyncmldm.apk
+  name : xtra_t_app.apk
+  name : SearchSelector.apk
+
+Shared users:
+  SharedUser [android.uid.system] (f8a8cfa):
+    userId=1000
+    Packages
+      PackageSetting{2e6de6 com.samsung.android.app.dressroom/1000}
+      PackageSetting{50204a com.samsung.android.hmt.vrsvc/1000}
+      PackageSetting{af5d5c com.samsung.android.app.settings.bixby/1000}
+      PackageSetting{e0b876 com.dsi.ant.server/1000}
+      PackageSetting{ed6147 com.samsung.android.svcagent/1000}
+      PackageSetting{12318de com.samsung.android.app.assistantmenu/1000}
+      PackageSetting{14d3f49 com.samsung.android.universalswitch/1000}
+      PackageSetting{1592ffa com.samsung.android.app.advsounddetector/1000}
+      PackageSetting{1837d0d com.android.location.fused/1000}
+      PackageSetting{190e500 com.sec.vsimservice/1000}
+      PackageSetting{1aab98d com.samsung.android.aircommandmanager/1000}
+      PackageSetting{27eb35b com.android.wallpaperbackup/1000}
+      PackageSetting{2a2604e com.sec.android.app.apex/1000}
+      PackageSetting{2c4270a com.sec.android.app.quicktool/1000}
+      PackageSetting{314cae3 com.samsung.android.shortcutbackupservice/1000}
+      PackageSetting{315db99 com.qualcomm.qti.services.secureui/1000}
+      PackageSetting{3278e30 com.sec.android.app.factorykeystring/1000}
+      PackageSetting{37dbe78 android/1000}
+      PackageSetting{38bd39e com.samsung.android.themecenter/1000}
+      PackageSetting{3a4a514 com.samsung.android.forest/1000}
+      PackageSetting{4288454 com.sec.bcservice/1000}
+      PackageSetting{43dbce0 com.samsung.android.server.wifi.mobilewips.client/1000}
+      PackageSetting{47f798b com.tencent.soter.soterserver/1000}
+      PackageSetting{491b5e1 com.sec.sve/1000}
+      PackageSetting{4fe482e com.sec.android.app.wlantest/1000}
+      PackageSetting{562d951 com.samsung.knox.keychain/1000}
+      PackageSetting{56b09c7 com.samsung.android.knox.attestation/1000}
+      PackageSetting{5aeeaf0 com.samsung.android.da.daagent/1000}
+      PackageSetting{5c60b93 com.samsung.android.smartswitchassistant/1000}
+      PackageSetting{5db6743 com.sec.android.app.servicemodeapp/1000}
+      PackageSetting{602ebe5 com.sec.android.emergencylauncher/1000}
+      PackageSetting{62ab93a com.sec.android.app.desktoplauncher/1000}
+      PackageSetting{6b05e3e com.sec.android.uibcvirtualsoftkey/1000}
+      PackageSetting{6bf323f com.samsung.ucs.agent.ese/1000}
+      PackageSetting{7281629 com.samsung.android.lool/1000}
+      PackageSetting{7396abf com.samsung.SMT/1000}
+      PackageSetting{74e64d1 com.samsung.android.app.omcagent/1000}
+      PackageSetting{75e3ef3 com.android.settings/1000}
+      PackageSetting{7752882 com.samsung.android.provider.filterprovider/1000}
+      PackageSetting{77b0456 com.android.networkstack.inprocess/1000}
+      PackageSetting{7c3349f com.android.providers.settings/1000}
+      PackageSetting{7e78cb9 com.sec.enterprise.mdm.services.simpin/1000}
+      PackageSetting{7fa51c6 com.android.server.telecom/1000}
+      PackageSetting{82a1e10 com.sec.android.app.personalization/1000}
+      PackageSetting{83c642d com.sec.app.RilErrorNotifier/1000}
+      PackageSetting{84119f1 com.samsung.android.bixby.wakeup/1000}
+      PackageSetting{8812808 com.samsung.android.mdecservice/1000}
+      PackageSetting{893d74f com.sec.android.sdhms/1000}
+      PackageSetting{8af292f com.sec.android.app.applinker/1000}
+      PackageSetting{8b391c0 com.sec.android.preloadinstaller/1000}
+      PackageSetting{9035385 com.android.dynsystem/1000}
+      PackageSetting{926ae77 com.samsung.android.biometrics.service/1000}
+      PackageSetting{9638272 com.samsung.android.bio.face.service/1000}
+      PackageSetting{977f716 com.android.inputdevices/1000}
+      PackageSetting{98fb0fc com.sec.android.app.parser/1000}
+      PackageSetting{9c0dbfb com.sec.android.wallpapercropper2/1000}
+      PackageSetting{9d8ff83 com.sec.factory.camera/1000}
+      PackageSetting{9de739b com.sec.android.diagmonagent/1000}
+      PackageSetting{a0c4a24 com.samsung.android.providers.carrier/1000}
+      PackageSetting{a2009ec com.samsung.accessibility/1000}
+      PackageSetting{a2464c2 com.sec.epdg/1000}
+      PackageSetting{a492b40 com.samsung.android.sskds/1000}
+      PackageSetting{a8a1ffd com.sec.modem.settings/1000}
+      PackageSetting{a8d4e5e com.samsung.android.mcfserver/1000}
+      PackageSetting{a8d78fe com.samsung.android.stickercenter/1000}
+      PackageSetting{aa0f7a7 com.sec.android.app.hwmoduletest/1000}
+      PackageSetting{aa15a0b com.samsung.clipboardsaveservice/1000}
+      PackageSetting{ad5c323 com.qti.snapdragon.qdcm_ff/1000}
+      PackageSetting{b221cc8 com.qualcomm.location/1000}
+      PackageSetting{b3251b5 com.sec.imsservice/1000}
+      PackageSetting{b373cd7 com.samsung.ucs.agent.boot/1000}
+      PackageSetting{b39c452 com.android.keychain/1000}
+      PackageSetting{b462b26 com.samsung.android.dqagent/1000}
+      PackageSetting{b48cf73 com.samsung.android.MtpApplication/1000}
+      PackageSetting{b4dbb13 com.sec.android.app.dexonpc/1000}
+      PackageSetting{b5c1225 com.samsung.advp.imssettings/1000}
+      PackageSetting{ba210df com.sec.factory/1000}
+      PackageSetting{c59d3b2 com.sem.factoryapp/1000}
+      PackageSetting{c975c9a com.sec.android.app.SecSetupWizard/1000}
+      PackageSetting{ca03d74 com.sec.mhs.smarttethering/1000}
+      PackageSetting{caf5869 com.samsung.android.brightnessbackupservice/1000}
+      PackageSetting{cbb60dd com.samsung.android.clipboarduiservice/1000}
+      PackageSetting{cfb6161 com.samsung.android.bbc.bbcagent/1000}
+      PackageSetting{d098be7 com.skms.android.agent/1000}
+      PackageSetting{d0b3592 com.samsung.android.securitylogagent/1000}
+      PackageSetting{d25db7b com.samsung.android.fmm/1000}
+      PackageSetting{d3ce4f2 com.samsung.android.server.iris/1000}
+      PackageSetting{d7a8d45 com.samsung.android.smartfitting/1000}
+      PackageSetting{d87eba4 com.wssyncmldm/1000}
+      PackageSetting{e4a5aa9 com.sec.android.emergencymode.service/1000}
+      PackageSetting{e6353be com.sec.enterprise.knox.shareddevice.keyguard/1000}
+      PackageSetting{e6b8f03 com.trustonic.teeservice/1000}
+      PackageSetting{e77b139 com.sec.usbsettings/1000}
+      PackageSetting{e92cf1d com.samsung.android.SettingsReceiver/1000}
+      PackageSetting{ed5e490 com.samsung.android.smartface/1000}
+      PackageSetting{f6782ac com.sec.android.soagent/1000}
+      PackageSetting{f77dd09 com.samsung.aasaservice/1000}
+      PackageSetting{f881dae com.sec.android.app.bluetoothtest/1000}
+      PackageSetting{fa35587 com.sec.imslogger/1000}
+      PackageSetting{fa3f3db com.sec.factory.iris.usercamera/1000}
+      PackageSetting{fa4e0e8 com.sec.automation/1000}
+      PackageSetting{fbabf11 com.samsung.android.biometrics.app.setting/1000}
+      PackageSetting{fd2a338 com.android.localtransport/1000}
+    install permissions:
+      com.samsung.android.service.aircommand.permission.ACCESS_AIRCOMMAND: granted=true
+      android.permission.REAL_GET_TASKS: granted=true
+      com.samsung.accessory.permission.TRANSPORTING_NOTIFICATION_ITEM: granted=true
+      android.permission.ACCESS_CACHE_FILESYSTEM: granted=true
+      com.samsung.android.hostmanager.permission.WRITE_APP_REGISTRY: granted=true
+      android.permission.BIND_INCALL_SERVICE: granted=true
+      com.samsung.android.carrier.permission.UPDATE_CARRIER: granted=true
+      android.permission.WRITE_SETTINGS: granted=true
+      com.sec.android.fota.permission.PUSH: granted=true
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      android.permission.CONTROL_KEYGUARD: granted=true
+      com.samsung.android.voicewakeup.permission.READ_SETTING_PROVIDER: granted=true
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      android.permission.CONFIGURE_DISPLAY_COLOR_MODE: granted=true
+      android.permission.ACCESS_WIMAX_STATE: granted=true
+      android.permission.RECOVERY: granted=true
+      android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS: granted=true
+      android.permission.SET_PROCESS_LIMIT: granted=true
+      com.samsung.android.knox.permission.KNOX_CONTAINER: granted=true
+      com.samsung.android.launcher.permission.WRITE_SETTINGS: granted=true
+      dexonpc.app.action.permission.KMS_FILETRANSFER_DRAG_FILEINFO: granted=true
+      com.samsung.android.security.permission.SAMSUNG_KEYSTORE_PERMISSION: granted=true
+      com.samsung.android.bixby.agent.permission.BIXBY_SERVICE_AVAILABLE_CHANGE: granted=true
+      com.samsung.permission.WIFI_READ_MAC_ADDRESS: granted=true
+      com.samsung.android.providers.contacts.permission.REQUEST_QUERY_COUNT: granted=true
+      android.permission.BIND_ATTENTION_SERVICE: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      com.dsi.ant.permission.ANTRADIO: granted=true
+      android.permission.RESTART_PACKAGES: granted=true
+      android.permission.USE_CREDENTIALS: granted=true
+      com.samsung.android.permission.MODIFY_THEME: granted=true
+      com.samsung.android.sdm.config.permission.RECEIVE_CONFIG_CHANGED: granted=true
+      android.permission.BIND_DEVICE_ADMIN: granted=true
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      android.permission.ACCESS_CHECKIN_PROPERTIES: granted=true
+      com.samsung.systemui.permission.FACE_WIDGET: granted=true
+      android.permission.MODIFY_AUDIO_ROUTING: granted=true
+      com.samsung.android.app.cocktailbarservice.permission.BIXBY_PROVIDER: granted=true
+      com.samsung.ims.permission.hdvoicesettinginfo: granted=true
+      com.samsung.android.permission.LOCK_TASK_MODE: granted=true
+      com.samsung.android.knox.permission.KNOX_CUSTOM_SEALEDMODE: granted=true
+      android.permission.READ_WIFI_CREDENTIAL: granted=true
+      com.sec.android.personalization.permission.KEYSTRING: granted=true
+      com.samsung.android.permission.FAST_WIRELESS_CHARGING_CONTROL: granted=true
+      com.samsung.android.rubin.context.permission.READ_CONTEXT_MANAGER: granted=true
+      android.permission.INSTALL_LOCATION_PROVIDER: granted=true
+      com.samsung.permission.WIFI_DIAGNOSTICS_PROVIDER: granted=true
+      android.permission.USE_RESERVED_DISK: granted=true
+      com.samsung.android.camera.iris.permission.USE_IRIS: granted=true
+      com.samsung.permission.SETTINGS_INAPP_NOTI: granted=true
+      com.samsung.android.mobileservice.permission.RECEIVE_SEMS_BROADCAST: granted=true
+      com.sec.android.providers.simmobility.permission.READ_SIMMOBILITY: granted=true
+      com.samsung.android.settings.intelligence.READ_JUMP_TO_APP_PROVIDER: granted=true
+      com.samsung.android.provider.indexing.permission.ACCESS_PROVIDER: granted=true
+      android.permission.MANAGE_ACCOUNTS: granted=true
+      com.samsung.android.app.talkback.permission.LABELING: granted=true
+      com.samsung.android.mdecservice.PERMISSION: granted=true
+      com.sec.imsservice.PERMISSION: granted=true
+      android.permission.SYSTEM_ALERT_WINDOW: granted=true
+      android.permission.MONITOR_DEFAULT_SMS_PACKAGE: granted=true
+      com.samsung.permission.HOME_TRIPLE_CLICK: granted=true
+      android.permission.BROADCAST_PHONE_ACCOUNT_REGISTRATION: granted=true
+      com.samsung.permission.dc.INVOKE_DC_METHOD: granted=true
+      com.sec.permission.UPLUS_SETTINGS: granted=true
+      com.sec.android.app.desktoplauncher.permission.OPEN_DEX_SETTINGS: granted=true
+      com.samsung.android.permission.RUN_DISK_DEFRAGMENTATION: granted=true
+      android.permission.CLEAR_APP_USER_DATA: granted=true
+      android.permission.PROVIDE_TRUST_AGENT: granted=true
+      android.permission.BROADCAST_CALLLOG_INFO: granted=true
+      com.sec.android.app.desktoplauncher.permission.WRITE_PREFFERENCE: granted=true
+      android.permission.MANAGE_SOUND_TRIGGER: granted=true
+      android.permission.SEND_RESPOND_VIA_MESSAGE: granted=true
+      com.sec.vsimservice.PERMISSION: granted=true
+      com.sec.enterprise.permission.MDM_PROXY_ADMIN_INTERNAL: granted=true
+      com.samsung.permission.WIFI_WIPS: granted=true
+      com.sec.android.app.factorymode.permission.KEYSTRING: granted=true
+      android.permission.SHUTDOWN: granted=true
+      com.samsung.android.knox.permission.KNOX_AUDIT_LOG: granted=true
+      android.permission.CHANGE_COMPONENT_ENABLED_STATE: granted=true
+      com.sec.phone.permission.SEC_FACTORY_PHONE: granted=true
+      android.permission.NFC: granted=true
+      com.sec.android.app.wlantest.permission.USE_WLAN_TEST: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      com.samsung.android.scloud.app.permission.BROADCAST: granted=true
+      com.sec.android.app.SecSetupWizard.permission.SHOW_SETUP_WIZARD: granted=true
+      com.samsung.android.app.omcagent.permission.C2D_MESSAGE: granted=true
+      com.samsung.android.app.aodservice.permission.AOD_PROVIDER: granted=true
+      com.samsung.rmt_exercise.permission.KEYSTRING: granted=true
+      com.vodafone.vodafone360updates.permission.SHOW_SETUP_WIZARD: granted=true
+      com.samsung.adaptivebrightnessgo.permission.SEM_ADAPTIVE_BRIGHTNESS: granted=true
+      com.sec.ims.nsds.OPEN_WEBSHEET: granted=true
+      com.samsung.android.oneconnect.permission.WRITE_EXTERNAL_SETTINGS_PROVIDER: granted=true
+      com.samsung.android.app.talkback.feedback.permission.TALKBACK: granted=true
+      android.permission.NETWORK_SETTINGS: granted=true
+      com.sec.permission.preconfig: granted=true
+      com.samsung.android.mcfserver.permission.USE_PROVIDER_API: granted=true
+      com.samsung.android.forest.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.BIND_WALLPAPER: granted=true
+      com.sec.android.provider.badge.permission.READ: granted=true
+      android.permission.START_ANY_ACTIVITY: granted=true
+      com.sec.android.app.desktoplauncher.permission.RECEIVE_LAUNCH_BROADCASTS: granted=true
+      com.samsung.android.bixby.agent.permission.READ_SETTINGS: granted=true
+      com.samsung.android.rubin.app.ui.permission.LAUNCH_RUBIN_SETTING: granted=true
+      android.permission.BROADCAST_SMS: granted=true
+      android.permission.CALL_PRIVILEGED: granted=true
+      android.permission.CHANGE_NETWORK_STATE: granted=true
+      android.permission.MASTER_CLEAR: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.WRITE_SYNC_SETTINGS: granted=true
+      com.samsung.android.oneconnect.permission.START_SERVICE: granted=true
+      android.permission.MANAGE_DYNAMIC_SYSTEM: granted=true
+      com.samsung.android.scloud.backup.lib.write: granted=true
+      com.sec.imsservice.READ_IMS_PERMISSION: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      com.qualcomm.permission.QCOM_DIAG: granted=true
+      com.wssnps.permission.COM_WSSNPS: granted=true
+      com.samsung.android.settings.permission.ACCESS_APP_LIST_CACHE: granted=true
+      com.samsung.android.bixby.service.bixbysearch.permission.BIXBY_SEARCH: granted=true
+      com.google.android.googleapps.permission.GOOGLE_AUTH: granted=true
+      com.sec.android.settings.permission.SOFT_RESET: granted=true
+      com.samsung.cmh.data.READ: granted=true
+      android.permission.MANAGE_ROLE_HOLDERS: granted=true
+      android.permission.PEERS_MAC_ADDRESS: granted=true
+      android.permission.DEVICE_POWER: granted=true
+      com.samsung.permission.READ_SEC_COMMON_POLICY: granted=true
+      com.sec.android.diagmonagent.permission.DIAGMON: granted=true
+      com.sec.android.emergencymode.permission.LAUNCH_EMERGENCYMODE_SERVICE: granted=true
+      com.sec.android.provider.emergencymode.WRITE_DATABASE: granted=true
+      com.samsung.android.permission.SEM_MEDIA_CONTENTS: granted=true
+      android.permission.READ_PRINT_SERVICES: granted=true
+      com.samsung.clipboardsaveservice.CLIPBOARDSAVESERVICE_PERMISSION: granted=true
+      android.permission.EXPAND_STATUS_BAR: granted=true
+      com.android.launcher.permission.UNINSTALL_SHORTCUT: granted=true
+      android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS: granted=true
+      android.permission.READ_PROFILE: granted=true
+      android.permission.BLUETOOTH: granted=true
+      com.samsung.android.app.assistantmenu.permission.READ_WRITE: granted=true
+      com.samsung.android.dsms.permission.SEND_MESSAGE: granted=true
+      com.samsung.android.email.permission.ACCESS_PROVIDER: granted=true
+      com.samsung.android.aremoji.provider.permission.READ_STICKER_PROVIDER: granted=true
+      android.permission.CAPTURE_AUDIO_HOTWORD: granted=true
+      android.permission.WRITE_MEDIA_STORAGE: granted=true
+      android.permission.CONTROL_DISPLAY_SATURATION: granted=true
+      android.permission.WRITE_BLOCKED_NUMBERS: granted=true
+      com.sec.android.app.DataCreate.permission.KEYSTRING: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.ACCESS_SURFACE_FLINGER: granted=true
+      android.permission.AUTHENTICATE_ACCOUNTS: granted=true
+      android.permission.INTERNET: granted=true
+      com.sec.nsds.READ_NSDS_PERMISSION: granted=true
+      com.sec.ims.nsds.READ_NSDS_PERMISSION: granted=true
+      com.sec.nsds.WRITE_NSDS_PERMISSION: granted=true
+      android.permission.REORDER_TASKS: granted=true
+      com.samsung.android.permission.COVER: granted=true
+      com.sec.android.app.applinker.permission.RECEIVE: granted=true
+      com.samsung.android.permission.WRITE_CAPTURED_URL: granted=true
+      com.sec.android.app.setupwizardlegalprovider.GETDOCUMENT: granted=true
+      com.samsung.android.knox.permission.KNOX_DEVICE_CONFIGURATION: granted=true
+      android.permission.GET_INTENT_SENDER_INTENT: granted=true
+      com.samsung.android.rubin.persona.permission.READ_PERSONA_MANAGER: granted=true
+      com.sec.factory.permission.KEYSTRING: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.CONTROL_VPN: granted=true
+      com.sec.android.providers.mapcon.permission.WRITE_MAPCON: granted=true
+      android.permission.UPDATE_DEVICE_STATS: granted=true
+      android.permission.BLUETOOTH_STACK: granted=true
+      android.permission.READ_PRECISE_PHONE_STATE: granted=true
+      com.sec.android.diagmonagent.permission.DIAGMON_SURVEY: granted=true
+      android.permission.MANAGE_FINGERPRINT: granted=true
+      com.qualcomm.permission.IZAT: granted=true
+      com.sec.android.app.selftestmode.permission.KEYSTRING: granted=true
+      com.samsung.android.hostmanager.permission.ACCESS_UNIFIED_HOST_MANAGER: granted=true
+      com.sec.ims.nsds.WRITE_NSDS_PERMISSION: granted=true
+      android.permission.BIND_CONNECTION_SERVICE: granted=true
+      android.permission.ACCESS_INSTANT_APPS: granted=true
+      com.sec.android.provider.emergencymode.READ_DATABASE: granted=true
+      android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS: granted=true
+      com.sec.android.phone.permission.AT_COMMAND: granted=true
+      android.permission.GET_PACKAGE_SIZE: granted=true
+      com.samsung.android.knox.permission.KPM_OPERATION_REQUEST_INFORM_ACTION_INTERNAL: granted=true
+      android.permission.MANAGE_USB: granted=true
+      com.sec.android.app.applinker.permission.READ_EXTRA: granted=true
+      com.sec.android.provider.samsungapps.permission.WRITE: granted=true
+      com.samsung.permission.DIRECT_ACCESS: granted=true
+      com.samsung.android.messaging.permission.READ_MESSAGE: granted=true
+      android.permission.ACCESS_ALL_DOWNLOADS: granted=true
+      android.permission.INTERACT_ACROSS_USERS_FULL: granted=true
+      com.samsung.android.scloud.permission.TRIGGER_BACKUP_SYNC: granted=true
+      com.sec.epdg.PERMISSION: granted=true
+      android.permission.BIND_APPWIDGET: granted=true
+      android.permission.STOP_APP_SWITCHES: granted=true
+      com.sec.android.app.servicemodeapp.permission.KEYSTRING: granted=true
+      android.permission.BATTERY_STATS: granted=true
+      com.samsung.android.provider.filterprovider.permission.READ_FILTER: granted=true
+      com.samsung.android.bixby.permission.WAKEUP_LAUNCH_BIXBY: granted=true
+      android.permission.PACKAGE_USAGE_STATS: granted=true
+      android.permission.MOUNT_UNMOUNT_FILESYSTEMS: granted=true
+      android.permission.TETHER_PRIVILEGED: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      com.sec.android.app.bluetoothtest.permission.KEYSTRING: granted=true
+      android.permission.MANAGE_DEBUGGING: granted=true
+      android.permission.MOVE_PACKAGE: granted=true
+      android.permission.SET_ACTIVITY_WATCHER: granted=true
+      android.permission.READ_BLOCKED_NUMBERS: granted=true
+      com.sec.android.app.desktoplauncher.permission.READ_PREFFERENCE: granted=true
+      android.permission.STATUS_BAR_SERVICE: granted=true
+      android.permission.READ_SEARCH_INDEXABLES: granted=true
+      com.dsi.ant.permission.ANT: granted=true
+      com.samsung.android.honeyboard.permission.PLUGIN: granted=true
+      android.permission.USE_FULL_SCREEN_INTENT: granted=true
+      com.samsung.android.mcfserver.permission.START_SERVICE: granted=true
+      android.permission.READ_PRIVILEGED_PHONE_STATE: granted=true
+      com.samsung.android.bixby.agent.permission.READ_LANGUAGE: granted=true
+      android.permission.ACCESS_IMS_CALL_SERVICE: granted=true
+      com.samsung.android.keyguardwallpaperupdator.SET_MULTIPLE_WALLPAPER_PROVIDER: granted=true
+      com.samsung.permission.SEM_ACCESS_WIFI_SECURED_INFO: granted=true
+      android.permission.TRIGGER_TIME_ZONE_RULES_CHECK: granted=true
+      android.permission.ACCESS_DOWNLOAD_MANAGER: granted=true
+      android.permission.BROADCAST_STICKY: granted=true
+      com.samsung.accessory.manager.permission.AUTHENTICATION_CONTROL: granted=true
+      android.permission.BLUETOOTH_PRIVILEGED: granted=true
+      com.sec.vsimservice.READ_PERMISSION: granted=true
+      com.sec.enterprise.knox.permission.KNOX_SEAMS: granted=true
+      com.sec.sveservice.PERMISSION: granted=true
+      android.permission.HARDWARE_TEST: granted=true
+      android.permission.USE_BIOMETRIC_INTERNAL: granted=true
+      android.permission.WRITE_SMS: granted=true
+      android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME: granted=true
+      android.intent.category.MASTER_CLEAR.permission.C2D_MESSAGE: granted=true
+      com.sec.android.permission.DSMLAWMO: granted=true
+      android.permission.ACCESS_KEYGUARD_SECURE_STORAGE: granted=true
+      android.permission.BIND_JOB_SERVICE: granted=true
+      android.permission.CONFIRM_FULL_BACKUP: granted=true
+      android.permission.SET_TIME: granted=true
+      android.permission.WRITE_APN_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      com.sec.settings.accessibility.permission.TOGGLE_TALK_BACK: granted=true
+      com.sec.enterprise.knox.cloudmdm.smdms.provider.permission.READ: granted=true
+      com.sec.factory.permission.BT_ID_WRITE: granted=true
+      android.permission.OBSERVE_APP_USAGE: granted=true
+      android.permission.MANAGE_USERS: granted=true
+      android.permission.DELETE_CACHE_FILES: granted=true
+      android.permission.SET_WALLPAPER_COMPONENT: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      com.sec.android.app.samsungapps.accesspermission.UPDATE_EXISTS: granted=true
+      com.qualcomm.permission.ACCESS_GTPWIFI_CROWDSOURCING_API: granted=true
+      android.permission.ACCESS_MTP: granted=true
+      android.permission.DISABLE_KEYGUARD: granted=true
+      android.permission.BACKUP: granted=true
+      com.samsung.cmh.data.WRITE: granted=true
+      com.sec.android.inputmethod.permission.KEYBOARD_SETTING: granted=true
+      com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS: granted=true
+      android.permission.CHANGE_CONFIGURATION: granted=true
+      android.permission.USER_ACTIVITY: granted=true
+      android.permission.LOCAL_MAC_ADDRESS: granted=true
+      com.qualcomm.permission.ACCESS_GTPWWAN_API: granted=true
+      android.permission.READ_LOGS: granted=true
+      android.permission.COPY_PROTECTED_DATA: granted=true
+      com.samsung.android.weather.permission.SETUP_WIZARD: granted=true
+      com.samsung.android.scloud.backup.lib.read: granted=true
+      com.samsung.android.knox.permission.KNOX_ENTERPRISE_DEVICE_ADMIN: granted=true
+      android.permission.INTERACT_ACROSS_USERS: granted=true
+      android.permission.SET_WALLPAPER: granted=true
+      com.samsung.android.messaging.permission.WRITE_MESSAGE: granted=true
+      com.sec.android.providers.mapcon.permission.READ_MAPCON: granted=true
+      com.samsung.android.permission.SEM_WRITE_CAPTURED_URL: granted=true
+      com.sec.android.app.dexonpc.permission.provider.READ_VALUE: granted=true
+      android.permission.SET_KEYBOARD_LAYOUT: granted=true
+      com.sec.mhs.smarttethering.RECEIVE_SMARTTETHERING: granted=true
+      com.samsung.android.app.omcagent.permission.WRITE_PROVIDER: granted=true
+      com.google.android.setupwizard.SETUP_COMPAT_SERVICE: granted=true
+      com.sec.android.daemonapp.ap.accuweather.ACCUWEATHER_DAEMON_ACCESS_PROVIDER: granted=true
+      com.sec.imsservice.WRITE_IMS_PERMISSION: granted=true
+      com.sec.imslogger.permission.SERVICE: granted=true
+      com.samsung.android.app.telephonyui.permission.USE_PHONE_VOICE_RECORDER: granted=true
+      com.sec.pcw.device.permission.SITDM: granted=true
+      com.sec.enterprise.knox.MDM_CONTENT_PROVIDER: granted=true
+      android.permission.MANAGE_APP_OPS_RESTRICTIONS: granted=true
+      android.permission.KILL_BACKGROUND_PROCESSES: granted=true
+      android.permission.MANAGE_USER_OEM_UNLOCK_STATE: granted=true
+      com.samsung.android.camera.iris.permission.RESET_IRIS_LOCKOUT: granted=true
+      android.permission.USE_FINGERPRINT: granted=true
+      android.permission.REQUEST_NETWORK_SCORES: granted=true
+      com.sec.knox.APK_INSTALL_LWC: granted=true
+      com.sec.android.provider.badge.permission.WRITE: granted=true
+      com.samsung.permission.HRM_EXT: granted=true
+      android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS: granted=true
+      com.samsung.android.settings.permission.ACCESS_EPISODE: granted=true
+      com.samsung.accessibility.permission.WRITE_SETTINGS: granted=true
+      com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS: granted=true
+      com.samsung.android.game.gamehome.permission.WRITE_CONTENT: granted=true
+      com.samsung.android.samsungaccount.permission.ACCESS_SASETTINGS: granted=true
+      android.permission.WRITE_USER_DICTIONARY: granted=true
+      android.permission.READ_SYNC_STATS: granted=true
+      android.permission.REBOOT: granted=true
+      com.sec.ImsTelephonyService.EPDN: granted=true
+      android.permission.MOUNT_FORMAT_FILESYSTEMS: granted=true
+      com.sec.testingsettings.permission.KEYSTRING: granted=true
+      com.samsung.android.settings.directaction.DIRECTACTION_PROVIDER: granted=true
+      android.permission.REQUEST_DELETE_PACKAGES: granted=true
+      com.samsung.permission.WRITE_SM_DATA: granted=true
+      android.permission.SUSPEND_APPS: granted=true
+      com.sec.android.permission.VOIP_INTERFACE: granted=true
+      android.permission.OEM_UNLOCK_STATE: granted=true
+      com.samsung.android.knox.permission.KNOX_KIOSK_MODE: granted=true
+      com.samsung.android.scloud.app.ui: granted=true
+      android.permission.MANAGE_DEVICE_ADMINS: granted=true
+      android.permission.CLEAR_APP_CACHE: granted=true
+      com.sec.enterprise.knox.cloudmdm.smdms.permission.SAMSUNG_MDM_SERVICE: granted=true
+      android.permission.CHANGE_APP_IDLE_STATE: granted=true
+      com.sec.android.app.desktoplauncher.permission.WRITE_SETTINGS: granted=true
+      android.permission.BIND_SETTINGS_SUGGESTIONS_SERVICE: granted=true
+      com.samsung.android.permission.FINGERPRINT_PRIVILEGED: granted=true
+      android.permission.TEST_BLACKLISTED_PASSWORD: granted=true
+      android.permission.MANAGE_NETWORK_POLICY: granted=true
+      com.qualcomm.permission.ACCESS_GTPWIFI_API: granted=true
+      com.samsung.android.sskds.permission.SSKDS_ATTK_SETUP: granted=true
+      com.samsung.android.knox.permission.KNOX_LICENSE_INTERNAL: granted=true
+      com.samsung.android.oneconnect.permission.READ_EXTERNAL_SETTINGS_PROVIDER: granted=true
+      android.permission.GRANT_RUNTIME_PERMISSIONS: granted=true
+      com.sec.android.provider.samsungapps.permission.READ: granted=true
+      android.permission.SET_POINTER_SPEED: granted=true
+      android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON: granted=true
+      com.sec.android.app.dexonpc.permission.provider.WRITE_VALUE: granted=true
+      com.samsung.android.oneconnect.permission.READ_CLOUD_LOCATION_PROVIDER: granted=true
+      android.permission.MANAGE_NOTIFICATIONS: granted=true
+      com.samsung.android.camera.iris.permission.MANAGE_IRIS: granted=true
+      com.samsung.android.game.gamehome.permission.READ_CONTENT: granted=true
+      android.permission.SEND_SHOW_SUSPENDED_APP_DETAILS: granted=true
+      android.permission.CONNECTIVITY_INTERNAL: granted=true
+      android.permission.SET_WALLPAPER_HINTS: granted=true
+      com.samsung.android.app.galaxyfinder.permission.ACCESS_APPLICATION_PROVIDER: granted=true
+      com.qualcomm.permission.ACCESS_GTPWWAN_CROWDSOURCING_API: granted=true
+      com.msc.openprovider.OpenContentProvider.READ_CONTENT: granted=true
+      android.permission.READ_SYNC_SETTINGS: granted=true
+      android.permission.START_ACTIVITIES_FROM_BACKGROUND: granted=true
+      com.sec.android.voltesettings.permission.KEYSTRING: granted=true
+      com.samsung.bluetooth.permission.BLUETOOTH_DEVICE: granted=true
+      com.sec.vsimservice.WRITE_PERMISSION: granted=true
+      android.permission.BROADCAST_PACKAGE_REMOVED: granted=true
+      com.samsung.android.permission.SSRM_NOTIFICATION_PERMISSION: granted=true
+      com.sec.android.fotaclient.permission.FOTA: granted=true
+      android.permission.OVERRIDE_WIFI_CONFIG: granted=true
+      com.samsung.permission.WIFI_FACTORY_TEST: granted=true
+      com.samsung.android.voicewakeup.permission.EXECUTE_UTTERANCE_RECORD_SERVICE: granted=true
+      android.permission.FORCE_STOP_PACKAGES: granted=true
+      android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS: granted=true
+      com.samsung.adaptivebrightnessgo.permission.ADAPTIVE_BRIGHTNESS_PERMISSION: granted=true
+      android.permission.ACCESS_NOTIFICATIONS: granted=true
+      com.samsung.android.mdec.provider.setting.CMC_ES_PERMISSION: granted=true
+      android.permission.HANDLE_CALL_INTENT: granted=true
+      android.permission.VIBRATE: granted=true
+      com.sec.android.providers.simmobility.permission.WRITE_SIMMOBILITY: granted=true
+      com.android.certinstaller.INSTALL_AS_USER: granted=true
+      com.sec.android.easyMover.permission.RUN_AGENT: granted=true
+      com.samsung.android.permission.READ_TILE_SUMMARY: granted=true
+      android.permission.MANAGE_ACTIVITY_STACKS: granted=true
+      com.osp.contentprovider.OSPContentProvider.READ_CONTENT: granted=true
+      com.samsung.android.app.omcagent.permission.READ_PROVIDER: granted=true
+      android.permission.INVOKE_CARRIER_SETUP: granted=true
+      android.permission.READ_USER_DICTIONARY: granted=true
+      com.samsung.android.permission.CALL_OVERLAY_MAGNIFIER: granted=true
+      com.sec.modem.settings.permission.KEYSTRING: granted=true
+      sec.android.permission.READ_MSG_PREF: granted=true
+      com.samsung.rcs.im.READ_PERMISSION: granted=true
+      com.sec.android.diagmonagent.permission.PROVIDER: granted=true
+      com.samsung.android.unifiedwfc.VOWIFI_PROVISIONING_PERMISSION: granted=true
+      android.permission.READ_CLIPBOARD_IN_BACKGROUND: granted=true
+      com.samsung.android.knox.permission.KNOX_UCM_PLUGIN_SERVICE: granted=true
+      android.permission.MANAGE_SCOPED_ACCESS_DIRECTORY_PERMISSIONS: granted=true
+      com.samsung.android.sm.permission.BIND_DEVICE_SECURITY: granted=true
+      com.sec.android.app.hiddenmenu.permission.KEYSTRING: granted=true
+      android.permission.CRYPT_KEEPER: granted=true
+      com.sec.android.app.lcdtest.permission.KEYSTRING: granted=true
+      com.samsung.accessory.permission.ACCESSORY_FRAMEWORK: granted=true
+      com.att.iqi.permission.RECEIVE_APP_STATE_BROADCASTER_STATE: granted=true
+      com.samsung.android.game.gamehome.permission.INVOKE: granted=true
+      android.permission.NOTIFY_PENDING_SYSTEM_UPDATE: granted=true
+      com.samsung.android.providers.media.READ: granted=true
+      com.sec.android.app.phoneutil.permission.KEYSTRING: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      com.samsung.contacts.permission.THEME: granted=true
+      android.permission.USE_BIOMETRIC: granted=true
+      com.samsung.android.app.assistantmenu.permission.ADVERTISE_ASSISTANTMENU: granted=true
+      com.dsi.ant.permission.ANT_ADMIN: granted=true
+      android.permission.MANAGE_APP_OPS_MODES: granted=true
+      android.permission.CHANGE_WIMAX_STATE: granted=true
+      com.sec.enterprise.knox.permission.MDM_ENTERPRISE_TIMA_NOTIFICATION: granted=true
+      android.permission.MODIFY_PHONE_STATE: granted=true
+      com.android.launcher.permission.INSTALL_SHORTCUT: granted=true
+      android.permission.STATUS_BAR: granted=true
+      com.osp.app.signin.BROADCAST_PERMISSION: granted=true
+      com.sec.permission.AssistiveLight_ONOFF: granted=true
+      com.samsung.android.permission.wirelesspowersharing: granted=true
+      com.samsung.permission.HQM_NOTIFICATION_PERMISSION: granted=true
+      android.permission.DUMP: granted=true
+      com.samsung.permission.LAUNCH_SOFTWARE_UPDATE: granted=true
+      android.permission.sec.MDM_AUDIT_LOG: granted=true
+      android.permission.READ_DEVICE_CONFIG: granted=true
+      com.samsung.android.launcher.permission.READ_SETTINGS: granted=true
+      com.sec.factory.permission.ALLOWFTCLIENTCPOBIND: granted=true
+      android.permission.LOCATION_HARDWARE: granted=true
+      com.sec.android.app.desktoplauncher.permission.RECEIVE_FIRST_LOAD_BROADCAST: granted=true
+      com.samsung.android.knox.permission.KNOX_CUSTOM_SYSTEM: granted=true
+      com.samsung.permission.SSENSOR: granted=true
+      android.permission.WAKE_LOCK: granted=true
+      com.samsung.android.knox.permission.KNOX_ANALYTICS_INTERNAL: granted=true
+      com.samsung.sec.android.application.csc: granted=true
+      android.permission.INJECT_EVENTS: granted=true
+      com.samsung.accessibility.bixby.permission.BIXBY_PROVIDER: granted=true
+      android.permission.BIND_NETWORK_RECOMMENDATION_SERVICE: granted=true
+      com.sec.android.app.desktoplauncher.permission.READ_SETTINGS: granted=true
+      com.samsung.android.soagent.permission.ACCESSORY: granted=true
+      com.samsung.android.settings.intelligence.READ_SETTINGS_SEARCH_DATA_PROVIDER: granted=true
+      com.samsung.android.service.svcagent.permission.FENRIR_AT_COMMAND: granted=true
+      android.permission.UPDATE_APP_OPS_STATS: granted=true
+      com.android.homescreen.home.permission.preview_image: granted=true
+      android.permission.OPEN_ACCESSIBILITY_DETAILS_SETTINGS: granted=true
+      com.samsung.android.app.omcagent.permission.OMC: granted=true
+      com.samsung.systemui.permission.KEYGUARD_IMAGE: granted=true
+      android.permission.MEDIA_CONTENT_CONTROL: granted=true
+      android.permission.DELETE_PACKAGES: granted=true
+      com.samsung.permission.READ_SM_DATA: granted=true
+      com.samsung.android.app.clockpack.LOCK_PROVIDER: granted=true
+      com.samsung.android.permission.SEM_AUTO_BIND_NOTIFICATION_LISTENER_SERVICE: granted=true
+    User 0: 
+      gids=[2001, 1065, 2901, 2002, 5050, 3002, 1023, 3003, 3001, 3007, 1002, 3010, 3011, 1021, 1000, 1015, 1010, 1024, 1007]
+      runtime permissions:
+        android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_WAP_PUSH: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_MMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.PROCESS_OUTGOING_CALLS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_BACKGROUND_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_MEDIA_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+    User 10: 
+      gids=[2001, 1065, 2901, 2002, 5050, 3002, 1023, 3003, 3001, 3007, 1002, 3010, 3011, 1021, 1000, 1015, 1010, 1024, 1007]
+      runtime permissions:
+        android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.RECEIVE_WAP_PUSH: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_MMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_COARSE_LOCATION: granted=false, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.PROCESS_OUTGOING_CALLS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+        android.permission.ACCESS_BACKGROUND_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_MEDIA_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT]
+    User 150: 
+      gids=[2001, 1065, 2901, 2002, 5050, 3002, 1023, 3003, 3001, 3007, 1002, 3010, 3011, 1021, 1000, 1015, 1010, 1024, 1007]
+      runtime permissions:
+        android.permission.READ_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_FINE_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_WAP_PUSH: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_MMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECEIVE_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_COARSE_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_PHONE_STATE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.SEND_SMS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.CALL_PHONE: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.CAMERA: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_CALL_LOG: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.PROCESS_OUTGOING_CALLS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.GET_ACCOUNTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_INSTALLER_EXEMPT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.RECORD_AUDIO: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.READ_CONTACTS: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_BACKGROUND_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+        android.permission.ACCESS_MEDIA_LOCATION: granted=true, flags=[ SYSTEM_FIXED|GRANTED_BY_DEFAULT|RESTRICTION_SYSTEM_EXEMPT|RESTRICTION_UPGRADE_EXEMPT]
+
+Package Changes:
+  Sequence number=81
+  User 0:
+    seq=11, package=com.google.android.gms
+    seq=15, package=com.sec.android.easyMover
+    seq=44, package=com.babbel.mobile.android.en
+    seq=45, package=com.adobe.reader
+    seq=46, package=bitcoin.minning.com
+    seq=49, package=com.samsung.android.lool
+    seq=54, package=com.samsung.android.scloud
+    seq=57, package=champion.gnuroot
+    seq=58, package=com.sec.android.app.sbrowser
+    seq=73, package=com.sec.android.app.desktoplauncher
+    seq=74, package=com.sec.android.desktopmode.uiservice
+    seq=77, package=com.samsung.android.forest
+    seq=79, package=com.samsung.android.app.simplesharing
+    seq=80, package=com.microsoft.appmanager
+  User 10:
+    seq=25, package=com.google.android.gms
+  User 150:
+    seq=34, package=com.google.android.gms
+    seq=35, package=com.samsung.android.app.sharelive
+
+
+Dexopt state:
+  [com.sec.android.app.dexonpc]
+    path: /system/priv-app/DeXonPC/DeXonPC.apk
+      arm: [status=verify] [reason=boot]
+
+
+Compiler stats:
+  [com.sec.android.app.dexonpc]
+     base.apk - 1759
+     DeXonPC.apk - 272
+
+Active APEX packages:
+
+
+Inactive APEX packages:
+
+
+Factory APEX packages:
+
+
+  APEX session state:

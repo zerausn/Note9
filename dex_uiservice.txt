@@ -1,0 +1,353 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.VIEW:
+        73b16cd com.sec.android.desktopmode.uiservice/.activity.ModeToggleActivity filter 1c42785
+          Action: "android.intent.action.VIEW"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.service.quicksettings.action.QS_TILE:
+        4a95b82 com.sec.android.desktopmode.uiservice/.DesktopDisplayDesktopModeTile filter a6d89da permission android.permission.BIND_QUICK_SETTINGS_TILE
+          Action: "android.service.quicksettings.action.QS_TILE"
+        e89c293 com.sec.android.desktopmode.uiservice/.DesktopModeTile filter 9404e0b permission android.permission.BIND_QUICK_SETTINGS_TILE
+          Action: "android.service.quicksettings.action.QS_TILE"
+
+Permissions:
+  Permission [com.sec.android.desktopmode.uiservice.permission.SELF] (aa2d2d0):
+    sourcePackage=com.sec.android.desktopmode.uiservice
+    uid=10018 gids=null type=0 prot=signature
+    perm=Permission{6f52c9 com.sec.android.desktopmode.uiservice.permission.SELF}
+    packageSetting=PackageSetting{b15adce com.sec.android.desktopmode.uiservice/10018}
+
+Permissions:
+  Permission [com.sec.android.desktopmode.uiservice.permission.BIND_DESKTOP_MODE_UI_SERVICE] (e83f4ef):
+    sourcePackage=com.sec.android.desktopmode.uiservice
+    uid=10018 gids=null type=0 prot=signature|privileged
+    perm=Permission{2aa4bfc com.sec.android.desktopmode.uiservice.permission.BIND_DESKTOP_MODE_UI_SERVICE}
+    packageSetting=PackageSetting{b15adce com.sec.android.desktopmode.uiservice/10018}
+
+Registered ContentProviders:
+  com.sec.android.desktopmode.uiservice/leakcanary.internal.AppWatcherInstaller$MainProcess:
+    Provider{6915285 com.sec.android.desktopmode.uiservice/leakcanary.internal.AppWatcherInstaller$MainProcess}
+  com.sec.android.desktopmode.uiservice/.SettingsProvider:
+    Provider{ae2d8da com.sec.android.desktopmode.uiservice/.SettingsProvider}
+
+ContentProvider Authorities:
+  [com.sec.android.desktopmode.uiservice.SettingsProvider]:
+    Provider{ae2d8da com.sec.android.desktopmode.uiservice/.SettingsProvider}
+      applicationInfo=ApplicationInfo{344f10b com.sec.android.desktopmode.uiservice}
+  [com.sec.android.desktopmode.uiservice.leakcanary-installer]:
+    Provider{6915285 com.sec.android.desktopmode.uiservice/leakcanary.internal.AppWatcherInstaller$MainProcess}
+      applicationInfo=ApplicationInfo{f4e2be8 com.sec.android.desktopmode.uiservice}
+
+Key Set Manager:
+  [com.sec.android.desktopmode.uiservice]
+      Signing KeySets: 1
+
+Packages:
+  Package [com.sec.android.desktopmode.uiservice] (b15adce):
+    userId=10018
+    pkg=Package{bb1bf31 com.sec.android.desktopmode.uiservice}
+    codePath=/system/priv-app/DesktopModeUiService
+    resourcePath=/system/priv-app/DesktopModeUiService
+    legacyNativeLibraryDir=/system/priv-app/DesktopModeUiService/lib
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=null
+    versionCode=385001007 minSdk=28 targetSdk=29
+    versionName=3.8.50.7
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{f4e2be8 com.sec.android.desktopmode.uiservice}
+    flags=[ SYSTEM HAS_CODE ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PARTIALLY_DIRECT_BOOT_AWARE PRIVILEGED ]
+    dataDir=/data/user/0/com.sec.android.desktopmode.uiservice
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2008-12-31 10:00:00
+    firstInstallTime=2008-12-31 10:00:00
+    lastUpdateTime=2008-12-31 10:00:00
+    signatures=PackageSignatures{3199201 version:2, signatures:[b378e95c], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ SYSTEM HAS_CODE ]
+    declared permissions:
+      com.sec.android.desktopmode.uiservice.permission.BIND_DESKTOP_MODE_UI_SERVICE: prot=signature|privileged, INSTALLED
+      com.sec.android.desktopmode.uiservice.permission.SELF: prot=signature, INSTALLED
+    requested permissions:
+      com.sec.android.desktopmode.uiservice.permission.SELF
+      android.permission.INTERNAL_SYSTEM_WINDOW
+      com.sec.spp.permission.TOKEN_c512e765df0cb8c573cba5486a6420c6fd7f1aad13c99422fd34e98b9971eb4399eb2ec2c903ad3fea18f4b9634494c5af790c0414edf2335ca1e4bdb588759dd92daea93027b7432e6ab0deed64f2edcc6985012e42c8ad9bcb0bb168610e52d81f47278ae0d888199501f15a24e7e578526700a5b820b1b139f24627cad8ee
+      android.permission.START_ACTIVITIES_FROM_BACKGROUND
+      android.permission.WAKE_LOCK
+      android.permission.CONFIGURE_WIFI_DISPLAY
+      android.permission.WRITE_SECURE_SETTINGS
+      android.permission.BLUETOOTH
+      android.permission.BLUETOOTH_ADMIN
+      android.permission.MAINLINE_NETWORK_STACK
+      com.samsung.android.knox.permission.KNOX_DEVICE_CONFIGURATION
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.CHANGE_WIFI_STATE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.RECEIVE_BOOT_COMPLETED
+    install permissions:
+      android.permission.CONFIGURE_WIFI_DISPLAY: granted=true
+      com.sec.android.desktopmode.uiservice.permission.SELF: granted=true
+      android.permission.INTERNAL_SYSTEM_WINDOW: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.BLUETOOTH: granted=true
+      com.samsung.android.knox.permission.KNOX_DEVICE_CONFIGURATION: granted=true
+      android.permission.BLUETOOTH_ADMIN: granted=true
+      android.permission.WRITE_SECURE_SETTINGS: granted=true
+      android.permission.CHANGE_WIFI_STATE: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.MAINLINE_NETWORK_STACK: granted=true
+      android.permission.START_ACTIVITIES_FROM_BACKGROUND: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=655491 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+    overlay paths:
+      /vendor/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk
+      gids=[3002, 3001]
+      runtime permissions:
+      disabledComponents:
+        com.sec.android.desktopmode.uiservice.activity.TouchpadUiActivity
+        com.sec.android.desktopmode.uiservice.activity.TouchpadActivity
+      enabledComponents:
+        com.sec.android.desktopmode.uiservice.DesktopDisplayDesktopModeTile
+        com.sec.android.desktopmode.uiservice.DesktopModeTile
+    User 10: ceDataInode=3146385 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3002, 3001]
+      runtime permissions:
+    User 150: ceDataInode=2830389 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3002, 3001]
+      runtime permissions:
+
+SkippingApks:
+  name : 100Game_PERSONAL_4x4_PF36_2009_2.0.2.apk
+  name : AccessTmobile_TMO.apk
+  name : AdaptClient.apk
+  name : AdvancedCalling.apk
+  name : AmazonMDIP_CAN.apk
+  name : AmazonMDIP_USA.apk
+  name : AmazonShopping-32bit.apk
+  name : AmazonShopping-Android-22.6-Patron-32bit-release.apk
+  name : AmazonShopping-Android-24.3.2-patron-arm32-release-signed.apk
+  name : AmazonShopping_CAN.apk
+  name : AmazonShopping_USA.apk
+  name : AmazonVideo_SPR_stub.apk
+  name : AppSelect_ATT.apk
+  name : AttIqi_ATT.apk
+  name : AttSmartHelp_ATT.apk
+  name : BellMobileTV.apk
+  name : BellTVWidget.apk
+  name : CallGuardian_uscc.apk
+  name : CallProtect_ATT.apk
+  name : CallingPlus.apk
+  name : CarrierDeviceManager.apk
+  name : CarrierSetupWizard.apk
+  name : CarrierWifi.apk
+  name : Chameleon2.apk
+  name : CnnPanel.apk
+  name : Crane.apk
+  name : DMAT_Stub.apk
+  name : DeviceCheckup_TLS.apk
+  name : DriveMode_hvpl_ATT.apk
+  name : DumpCollector.apk
+  name : EmergencyAlert.apk
+  name : EntelPlay_5.0.apk
+  name : FBInstagram_stub.apk
+  name : Fast.apk
+  name : HuxExtension.apk
+  name : Ignite-telefonica.apk
+  name : Ignite-uscc.apk
+  name : IgniteVerizon.apk
+  name : Ignite_AIO.apk
+  name : JanskySettings.apk
+  name : LLKAgent.apk
+  name : LinkedIn_SamsungStub.apk
+  name : LoginClientUnbranded.apk
+  name : LoginClientUnbranded_sku.apk
+  name : LookoutFull_SPR.apk
+  name : Lookout_ATT.apk
+  name : Lookout_MTR.apk
+  name : Lookout_TMO.apk
+  name : MDIP.apk
+  name : MHSWrapperMTR.apk
+  name : MHSWrapperUSC.apk
+  name : MSSkype_stub.apk
+  name : MaftPreloadManagerAndroidApp-MovistarMX.apk
+  name : MaftPreloadManagerAndroidApp-TEF_LATAM.apk
+  name : MaftPreloadManagerAndroidApp-release-signed-tagged.apk
+  name : MetroAppStore_MTR.apk
+  name : MetroZone_MTR.apk
+  name : MeuTIM.apk
+  name : MinhaOi.apk
+  name : MnoDmClient.apk
+  name : MnoDmViewer.apk
+  name : MobileID.apk
+  name : MobileInstaller.apk
+  name : MobileSecurity_ATT.apk
+  name : MovistarPlayTGU_stub_v1.3_20190628.apk
+  name : MyATT_ATT.apk
+  name : MyAccount_FMC.apk
+  name : MyAccount_VMC.apk
+  name : MyBell.apk
+  name : MyCricket_AIO.apk
+  name : MyMetro_MTR.apk
+  name : MyRogers.apk
+  name : MyVerizonMobile.apk
+  name : MyVerizonService.apk
+  name : NameIDVPL_TMO.apk
+  name : NameID_MTR.apk
+  name : NaverV_N.apk
+  name : NetWise_AIO.apk
+  name : OBDM_Permissions.apk
+  name : OiApps.apk
+  name : OiAppsClube.apk
+  name : OiRecarga.apk
+  name : OiWiFi.apk
+  name : OmadmSpr.apk
+  name : OmadmSprHm.apk
+  name : OneDrive_Samsung_v3.apk
+  name : OneTalkDialer.apk
+  name : PhoneInfo2.apk
+  name : PrefAct.apk
+  name : Push_To_Talk_BMC.apk
+  name : QAS_DVC_MSP_VZW.apk
+  name : QoSIndicator_ATT.apk
+  name : RRO_AMX_stk1.apk
+  name : RRO_AMX_stk2.apk
+  name : RemoteSupport_ATT.apk
+  name : RetailMode_hvpl_ATT.apk
+  name : RogersNHL.apk
+  name : SDMHiddenMenu.apk
+  name : SNP_stub.apk
+  name : SamsungNACloudDreamNewIcon.apk
+  name : SamsungPayStub.apk
+  name : SecVVM_dream.apk
+  name : SecVVM_v2.apk
+  name : SecVVM_v3.apk
+  name : SelfCareMobile-6.0.3-prod-signed.apk
+  name : SimLock_TMO.apk
+  name : SmartHelp_ATT.apk
+  name : SmartWifi_Stub_ATT.apk
+  name : SpectrumCM.apk
+  name : SprWfc.apk
+  name : SprintAndroidExtension2.apk
+  name : SprintCallerID02.apk
+  name : SprintHub.apk
+  name : SprintZone.apk
+  name : StubUpdater.apk
+  name : TIGO_Sports_BO_v7.0719.apk
+  name : TelcelContenedor_Full.apk
+  name : Telus_MyAccount.apk
+  name : TmoVVM.apk
+  name : TmoWfcPrefV2.apk
+  name : UnifiedSettingService.apk
+  name : UnifiedTetheringProvision.apk
+  name : UnifiedVVM.apk
+  name : Upday.apk
+  name : VMS_stub.apk
+  name : VZWAPNService_VZW.apk
+  name : VZWAPNService_sku.apk
+  name : VisualVoiceMail_CCT_stub.apk
+  name : VisualVoiceMail_CHA_stub.apk
+  name : VisualVoiceMail_TFN_stub.apk
+  name : VisualVoiceMail_VZW_stub.apk
+  name : VisualVoicemailSpr.apk
+  name : VivoAppsClube.apk
+  name : VivoMaisApps.apk
+  name : Voicemail_AIO.apk
+  name : VzCloud.apk
+  name : VzwImsApiService.apk
+  name : WfcServiceV2.apk
+  name : WhatsAppDownloader.apk
+  name : YelpPanel.apk
+  name : ZVV_STK2_RRO.apk
+  name : ZVV_STK_RRO.apk
+  name : altice_music_2.0.apk
+  name : apps_brasil_signed_aligned.apk
+  name : canid_stub.apk
+  name : che_notification_6.apk
+  name : com.customermobile.preload.vzw.apk
+  name : deezer_5.4.13.62.apk
+  name : entel_peru_7-6-1.apk
+  name : instagram-stub-30-0-1.apk
+  name : instagram-stub-BR.apk
+  name : instagram-stub_45-1-22.apk
+  name : instagram-stub_52-0-3.apk
+  name : kolbi_5.0.19.apk
+  name : messenger-stub-30-0-1.apk
+  name : messenger-stub-BR.apk
+  name : messenger-stub_45-1-22.apk
+  name : messenger-stub_52-0-3.apk
+  name : miTelcel_Stub.apk
+  name : mitigo-bolivia-release_3.0.1_rc1.apk
+  name : mySaskTel.apk
+  name : myflow_cww_6-9-0-174.apk
+  name : noticias_aro_146.apk
+  name : ready2Go_ATT.apk
+  name : rro_psn_stk1.apk
+  name : rro_uwt_srk1.apk
+  name : rro_uwt_stk2.apk
+  name : rro_ztm_stk1.apk
+  name : rro_ztm_stk2.apk
+  name : rro_ztr_stk1.apk
+  name : rro_ztr_stk2.apk
+  name : talkback.apk
+  name : tickantel_1-8-1.apk
+  name : tigomoney_stub_signed_v1.1.apk
+  name : tigoshop-bv-v1.3.0.apk
+  name : trendy_aro_28.apk
+  name : tuapp_4-0-2-4.apk
+  name : veramas_1-17-5.apk
+  name : veratv_2-4-0.apk
+  name : videotron_usercentre_plus.apk
+  name : virginmobile_mybenefits.apk
+  name : vzw_msdc_api.apk
+  name : wssyncmldm.apk
+  name : xtra_t_app.apk
+  name : SearchSelector.apk
+
+Package Changes:
+  Sequence number=81
+  User 0:
+    seq=11, package=com.google.android.gms
+    seq=15, package=com.sec.android.easyMover
+    seq=44, package=com.babbel.mobile.android.en
+    seq=45, package=com.adobe.reader
+    seq=46, package=bitcoin.minning.com
+    seq=49, package=com.samsung.android.lool
+    seq=54, package=com.samsung.android.scloud
+    seq=57, package=champion.gnuroot
+    seq=58, package=com.sec.android.app.sbrowser
+    seq=73, package=com.sec.android.app.desktoplauncher
+    seq=74, package=com.sec.android.desktopmode.uiservice
+    seq=77, package=com.samsung.android.forest
+    seq=79, package=com.samsung.android.app.simplesharing
+    seq=80, package=com.microsoft.appmanager
+  User 10:
+    seq=25, package=com.google.android.gms
+  User 150:
+    seq=34, package=com.google.android.gms
+    seq=35, package=com.samsung.android.app.sharelive
+
+
+Dexopt state:
+  [com.sec.android.desktopmode.uiservice]
+    path: /system/priv-app/DesktopModeUiService/DesktopModeUiService.apk
+      arm64: [status=speed-profile] [reason=bg-dexopt]
+
+
+Compiler stats:
+  [com.sec.android.desktopmode.uiservice]
+     DesktopModeUiService.apk - 7337
+
+Active APEX packages:
+
+
+Inactive APEX packages:
+
+
+Factory APEX packages:
+
+
+  APEX session state:
